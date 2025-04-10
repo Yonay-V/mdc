@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Astronomy Central | Yonay Valdes, 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+	body{
+		--dark_color: black;
+		--light_color: #eff8e2;
+		--main_color: #0020ff;
+		--secondary_color: #008bf8;
+		--accent_color: #e63946;
+		margin:0;
+		padding:0;
+		background-color:#fff;
+		 font-family: "Roboto", serif;
+     }
+	wrapper{
+		display:block;
+		margin:0 auto;
+		background-color:var(--light_color);
+		padding: 2.5%;
+		box-sizing: border-box;
+     }
+	a {
+		color: var(--accent_color);
+		text-decoration: underline solid var(--accent_color);
+	}
+	h1 {
+		font-size: 3em;
+		margin: 0;
+		color: var(--main_color);
+		text-shadow: var(--secondary_color) -2px 2px; 
+		text-decoration: none;
+	}
+	h2 {
+		font-size: 2em;
+		color: var(--main_color);
+		margin: 1em 0;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0 0 2vh 0;
+		border-bottom: solid var(--accent_color) 0.5vh;
+	}
+	li {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1.5em;
+		font-weight: 600;
+		color: var(--secondary_color);
+		margin: 10px 0;
+	}
+	li:hover {
+		color: var(--accent_color);
+		text-decoration: underline solid var(--accent_color);
+	}
+	main {
+		display:grid;
+		gap: 1em;
+		grid-template-columns: repeat(auto-fit, 1fr);
+	}
+	.card {
+		padding: 1em;
+		width: auto;
+		aspect-ratio: 1 /1;
+		background-color: #FFF8EB;
+		box-sizing: border-box;
+		overflow: hidden;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.card img {
+		width: 100%;
+		margin-bottom: 2em;
+		box-shadow: 0 0 5px 0px #111;
+		background-size: cover;
+	}
+	
+	
+	
+	footer {
+		border-top: solid var(--accent_color) 0.5vh;
+	}
+	@media (min-width: 50em) {
+		wrapper {
+			background-color:var(--dark_color);
+		}
+		p {
+		color: var(--light_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+		}
+		.card_tall {
+			grid-row: span 2 / auto;
+		}
+		.card_wide {
+			grid-column: span 2 / auto;
+		}
+	}
+	@media (min-width: 65em) {
+		wrapper {
+			background-color:var(--dark_color);
+		}
+		p {
+		color: var(--light_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+		}
+	}	
+	@media (min-width: 80em) {
+		wrapper {
+			background-color:var(--dark_color);
+		}
+		p {
+		color: var(--light_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+		}
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+	<header>
+		<a href="https://youtu.be/PNKxAWiu4Fc?si=fOUTJdsbMr9tcU_R" target="_blank" style="text-decoration: none;"><h1>Astronomy Central</h1></a>
+		<nav>
+			<ul>
+				<a href="https://open.spotify.com/album/16pubXUlqRziVWRsT6lLNz?si=4UlMQPmaShCVFUKN1b7P0A" target="_blank"><li>Sunset Season</li></a>
+				<a href="https://open.spotify.com/album/2CMlkzFI2oDAy5MbyV7OV5?si=Xix9mV8pSZyLgfqZxbfXOw" target="_blank"><li>Kid Krow</li></a>
+				<a href="https://open.spotify.com/album/5hIOd0FvjlgG4uLjXHkFWI?si=lNlC2Lr0RwmlUUMi3mkMYA"  target="_blank"><li>Superache</li></a>
+				<a href="https://open.spotify.com/album/39gMxRpFKgIVvw3krIIam5?si=W7XfoB28S4y_7aHFhbRakQ" target="_blank"><li>Found Heaven</li></a>
+			</ul>
+		</nav>
+	</header>
+	<h2>Our Favorite Photos of Outer Space</h2>
+	<main>
+		<div class="card" style="background-image: url(images/aldebaran-s-dJlkMGUn9n4-unsplash.jpg) ;"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-DVx82a79X74-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-zfYYrxdvTzE-unsplash.jpg) ;"></div>
+		<div class="card" style="background-image:url(images/aldebaran-s-zAm8YFpCCsc-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-XUTWP5D9FNU-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-uXchDIKs4qI-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-qtRF_RxCAo0-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-O-6kqnEvO1s-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-pkDXmYQPTwg-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-tkMsYL6O3tI-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-gvb5EvxCYKE-unsplash.jpg);"></div>
+		<div class="card" style="background-image: url(images/aldebaran-s-vOmA5cfvDBg-unsplash.jpg);"></div>
+	</main>
+	<p>All photos by <a href="https://unsplash.com/@aldebarans" target="_blank">Aldebaran S</a></p>
+	<footer>
+		<p>
+			© 2025, Yonay Valdes.<br>
+			This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+		</p>
+	</footer>
+</wrapper>
+</body>
+</html>
