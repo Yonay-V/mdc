@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>project3</title>
+	
+<style>
+	
+	body{
+		margin: 0;
+		padding: 0;
+		background-color: rgba(255, 245, 255, 1);
+		background-image: url("noise-light.png");
+		font-family: sans-serif;
+	}
+	::selection {
+		background-color: rgba(255, 245, 255, .6);
+		text-decoration: underline dotted blue;
+	}
+	wrapper {
+		width: 1366px;
+		display: block;
+		margin: 0 auto 25px;
+		background-image: url("noise-light.png");
+		background-color: rgba(255, 245, 255, 1);
+		border-bottom: black  5px solid;
+	}
+	ul, li, a {
+		margin: 0;
+		padding: 0;
+	}
+	
+	p {
+		line-height: 1.4;
+		font-size: 22px;
+	}
+	
+	h1 {
+		font-size: 36px;
+		margin: 15px;
+		font-weight: 800;
+		text-decoration: underline wavy;
+	}
+	
+	h2 {
+		margin: 0 15px;
+		font-size: 36px;
+	}
+	
+	h3 {
+		margin: 5px 15px;
+		font-size: 28px;
+		font-weight: 100;
+	}
+	
+	nav {
+		width: 1316px;
+		height: 40px;
+		position: fixed;
+		margin: 10px 25px;
+		background-color: rgba(0, 0, 0, .75);
+		box-shadow: 0px 0px 20px rgba(0, 0, 0, .7);
+		border-radius: 10px;
+		border: rgba(0, 0, 0, .3) solid 1px;
+		box-sizing: border-box;
+		backdrop-filter: saturate(200%) blur(5px);
+	}
+	
+	ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	li, li a {
+		display: inline-block;
+		text-decoration: underline wavy rgba(255, 245, 255, 1);
+		color: rgba(255, 245, 255, 1);
+		padding: 5px;
+	}
+	
+	a:hover {
+		color: blue;
+		text-decoration: underline dotted blue;
+	}
+	
+	section {
+		padding: 60px 15px 25px;
+	}
+	
+	.banner {
+		display: flex;
+		align-items: flex-end;
+		width: 100%;
+		height: 425px;
+		border-radius: 15px;
+		background: linear-gradient(#e66465, #9198e5);
+		margin: 0 0 50px;
+	}
+	
+	.event {
+		display: inline-block;
+	}
+	
+	.event img {
+		width: 425px;
+		height: 425px;
+		border-radius: 15px;
+		background: linear-gradient(#e66465, #9198e5);
+	}
+	
+	.w850 {
+		display: inline-block;
+		width: 850px;
+		height: 425px;
+		border-radius: 15px;
+		background-image: url("noise-light.png");
+		background: linear-gradient(#e66465, #9198e5);
+	}
+	
+	.w425 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		align-content: center;
+		width: 425px;
+		height: 425px;
+		border-radius: 15px;
+		background: linear-gradient(#e66465, #9198e5);
+	}
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin: 25px 0;
+	}
+	
+	.container .w425 h3 {
+		margin: 0 25px 15px;
+		text-decoration: underline wavy black;
+	}
+	
+	.w425 p {
+		margin: 0px 25px;
+	}
+	
+	.w425:has(p) {
+		background: none;
+	}
+	
+	#media {
+		display: flex;
+		align-content: center;
+		flex-wrap: wrap;
+	}
+	
+	footer {
+		margin: 25px;
+	}
+	
+	wrapper {
+		
+	}
+	
+</style>
+</head>
+
+<body>
+<wrapper>
+	<nav>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#media">Media</a></li>
+			<li><a href="#location">Location</a></li>
+		</ul>
+	</nav>
+	
+	<section id="home">
+		
+		<div class="banner">
+			<h1>Welcome to Performing Arts!</h1>
+		</div>
+		
+		<h2>Events</h2>
+		
+		<div class="container">
+			<div class="event">
+			<img>
+			<h3>Event Name</h3>
+			<h3>Event Date</h3>
+			</div>
+			<div class="event">
+				<img>
+				<h3>Event Name</h3>
+				<h3>Event Date</h3>
+			</div>
+			<div class="event">
+				<img>
+				<h3>Event Name</h3>
+				<h3>Event Date</h3>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section id="media">
+		<h2>Get To Know Us</h2>
+		<div class="container">
+			<div class="w850"></div>
+			<div class="w425">
+				<p>
+					At our theater, we believe that the performing arts are a vital part of community life. By showcasing diverse productions, we celebrate a wide range of voices and stories, fostering dialogue and understanding among our audience. Our commitment to inclusivity and artistic innovation not only enriches the cultural fabric of our city but also inspires future generations of artists and patrons alike.
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="w425"></div>
+			<div class="w425">
+				<p>
+					Our theater serves as a cultural hub, bringing together artists and audiences from all walks of life. Through collaborations with local schools, community organizations, and emerging talents, we strive to create an environment where creativity thrives. By hosting a variety of performances and events, we contribute to the artistic landscape of our community, igniting passion and appreciation for the performing arts.
+				</p>
+			</div>
+			<div class="w425"></div>
+		</div>			
+	</section>
+	
+	<section id="location">
+		<h2>Getting Here</h2>
+		<div class="container">
+			<div class="w425">
+				<p>
+					Our theater is conveniently located in the heart of downtown, providing easy access for all visitors. Nestled at [123 Arts Avenue, Cityville], we are surrounded by a vibrant community of restaurants, cafes, and shops. With ample public transportation options and nearby parking, you’ll find it easy to enjoy a night of exceptional performances. We look forward to welcoming you!
+				</p>
+			</div>
+			<div class="w850"></div>
+		</div>
+		<div class="container">
+			<div class="w850"></div>
+			<div class="w425">
+				<h3>FAQ</h3>
+				<p>
+					Welcome to our FAQ section! Here, you'll find answers to common questions about our performances, ticketing, and venue policies. If you can’t find what you’re looking for, feel free to reach out to our team for more assistance. Enjoy the show!
+				</p>
+			</div>
+		</div>
+	</section>
+	
+
+	
+	<footer>
+		<p>© Year, Your Name. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+</wrapper>
+</body>
+</html>
