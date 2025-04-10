@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to D.I.Y. Cooking! | Yonay Valdes, 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<style>
+	::selection {
+		background: #046244;
+		color: #FFF8EB;
+	}
+	body{
+		margin:0;
+		padding:0;
+		background-color:#fff;
+		font-family: "Lora", serif;
+     }
+	wrapper{
+		display:block;
+		margin:0 auto;
+		background-color:#FFB833;
+		padding: 2.5%;
+		box-sizing: border-box;
+     }
+	h1 {
+		font-size: 3em;
+		margin: 0;
+	}
+	h2 {
+		font-size: 1.5em;
+		color: #0D226D;
+		margin: 0;
+	}
+	ul {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 0 2vh 0;
+		border-bottom: dotted #0D226D 0.5vh;
+	}
+	li {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1.2em;
+		font-weight: 600;
+		color: #0D226D;
+		text-decoration: underline wavy #0D226D;
+	}
+	li:hover {
+		color: #FFF8EB;
+		text-decoration: underline wavy #FFF8EB;
+	}
+	main {
+		display:flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		gap: 2em;
+	}
+	.card {
+		padding: 1em;
+		background-color: #FFF8EB;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		box-sizing: border-box;
+	}
+	.card img {
+		width: 100%;
+		margin-bottom: 1em;
+		box-shadow: 0 0 5px 0px #111;
+	}
+	.card h3 {
+		color: #0D226D;
+		font-size: 2em;
+		margin: 0;
+		line-height: 1.2;
+		text-decoration: underline wavy #0D226D;
+	}
+	.card h4 {
+		margin: 0.5em 0 0 0;
+		color: #0D226D;
+	}
+	.card p {
+		line-height: 1.5;
+		margin: 0.5em 0 0 0;
+	}
+	.card a {
+		color: #0D226D;
+		text-decoration: none;
+	}
+	a {
+		color: #0D226D;
+		text-decoration: underline wavy #0D226D;
+	}
+	@media (min-width:32em) {
+		wrapper {
+			background-color: #F38602;
+		}
+		main {
+			justify-content: space-between;
+		}
+		.card {
+			width: 45%;
+		}
+	}
+	@media (min-width:64em) {
+		wrapper {
+			background-color: #F05023;
+		}
+		main {
+			justify-content: space-between;
+		}
+		.card {
+			width: 30%;
+		}
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+	<header>
+		<h1>You Can Do It Yourself!</h1>
+		<h2>by Erica Allen.</h2>
+		<nav>
+			<ul>
+				<li>Home</li>
+				<li>Store</li>
+				<li>Blog</li>
+				<li>About</li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<div class="card">
+			<img src="images/brownie.jpg">
+			<h3>Brownies</h3>
+			<h4>Month Highlight!</h4>
+			<p>Welcome to my chocolate haven! These fudgy brownies are my go-to indulgence. With their rich, gooey texture and deep chocolate flavor, they’re the ultimate treat for fellow chocoholics like me. Dive into a bite and let the chocolate bliss take over!</p>
+		</div>
+		<div class="card">
+			<img src="images/drink.jpg">
+			<h3>Drinks</h3>
+			<p>When life gives you lemons, make a refreshing drink! Whether it's a zesty lemonade, a crisp iced tea, or a revitalizing fruit smoothie, these beverages are my favorite way to stay cool and refreshed. Sip back, relax, and enjoy the goodness!</p>
+		</div>
+		<div class="card">
+			<img src="images/cake.jpg">
+			<h3>Cakes</h3>
+			<p>Cake is my love language. Moist, fluffy, and bursting with flavor, each slice is a celebration of joy and sweetness. Join me in savoring every delightful crumb—because life's too short not to eat cake!</p>
+		</div>
+		<div class="card">
+			<img src="images/french_toast.jpg">
+			<h3>Breakfast</h3>
+			<p>Good morning, sunshine! My breakfast corner is all about starting the day with deliciousness. Whether I'm craving the comfort of classic pancakes or looking for something new like vibrant smoothie bowls, I've got plenty of ideas to share. Join me for tasty breakfast recipes. Breakfast never felt so good!</p>
+		</div>
+		<div class="card">
+			<img src="images/kwasson.jpg">
+			<h3><a href="https://yonay-v.github.io/Yonay-V/gra1750p5yonayvaldes2024/" target="_blank">Kwasson</a></h3>
+			<p>Bonjour from my kitchen! These flaky, buttery croissants are like a little taste of Paris. Perfectly golden and light, they’re my favorite way to start the day. Pair one with a cup of coffee or tea, and let's transport ourselves to a cozy Parisian café together.</p>
+		</div>
+		<div class="card">
+			<img src="images/round_cake.jpg">
+			<h3>Toppings</h3>
+			<p>Hello, flavor enhancers! I'm all about taking my dishes to the next level with amazing toppings. From homemade sauces to crunchy nuts and fresh herbs, I love adding that extra oomph to my meals. I'll show you how to turn ordinary dishes into extraordinary ones with simple yet magical finishing touches.</p>
+		</div>
+	</main>
+	
+	<footer>
+		<p>All images by <a href="https://unsplash.com/@shootdelicious" target="_blank">Eiliv Aceron</a></p>
+		<p>
+			© 2025, Yonay Valdes.<br>
+			This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+		</p>
+	</footer>
+</wrapper>
+</body>
+</html>
