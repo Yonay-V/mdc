@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+	body {
+		background-image: url("images/hill-green.jpg");
+		background-size: cover;
+		font-family: "Poppins", serif;
+		margin: 0;
+	}
+	wrapper {
+		display: block;
+		background-color: rgba(71,71,71,0.50);
+		width: 90%;
+		margin: 0 auto;
+		padding: 1em;
+	}
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+		margin: 1rem;
+	}
+	h2 {
+		font-size: 2rem;
+		text-align: center;
+		margin: 1rem;
+	}
+	main {
+		display: flex;
+		justify-content: space-between;
+	}
+	.puzzle {
+		width: 68%;
+		aspect-ratio: 3 / 2;
+		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		border: rgba(71,71,71,0.50) 0.1vw solid;
+		font-size: 0px;
+	}
+
+	.pieces {
+		width: 30%;
+		aspect-ratio: 2 / 3;
+		display: inline-flex;
+		justify-content: space-evenly;
+		align-items: center;
+		align-content: space-evenly;
+		flex-wrap: wrap;
+		border: black thin solid;
+		font-size: 0px;
+		box-sizing: border-box;
+		
+	}
+	.place {
+		width: calc(100%/6);
+		height: auto;
+		aspect-ratio: 1 / 1;
+		display: inline-block;
+		border: rgba(71,71,71,0.50) 0.1vw solid;
+		box-sizing: border-box;
+		font-size: 0px;
+	}
+	.piece {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		display: inline-block;
+		font-size: 0px;
+	}
+	
+	.container {
+		width: calc(85%/4);
+		height: revert;
+		aspect-ratio: 1;
+		display: inline-block;
+		
+	}
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	li {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+	li:hover {
+		color: white;
+	}
+	footer {
+		width: 90%;
+		text-align: left;
+	}
+	.header__triangle {
+	border-top: 7.77778em solid yellow;
+  	border-left: 17.7778em solid #0000;
+    border-left-width: 17.7778em;
+    border-left-style: solid;
+    border-left-color: rgba(0, 0, 0, 0);
+ 	 border-right: 17.7778em solid #0000;
+	  width: 35.5556em;
+	  height: 7.77778em;
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  transform: translate(-50%);
+}
+	
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+<wrapper>
+	<header>
+		<h1>Puzzle Game!</h1>
+		<nav>
+			<h2>Try our other puzzles!</h2>
+			<ul>
+				<li>
+					Hill
+				</li>
+				<li>
+					Mountains
+				</li>
+				<li>
+					Space
+				</li>
+				<li>
+					Beach
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="pieces" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="container">
+				<img id="piece12" class="piece" src="images/squares/piece_01.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			
+			<div class="container">
+				<img id="piece3" class="piece" src="images/squares/piece_20.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece19" class="piece" src="images/squares/piece_03.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece10" class="piece" src="images/squares/piece_15.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece22" class="piece" src="images/squares/piece_22.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece6" class="piece" src="images/squares/piece_06.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			
+			<div class="container">
+				<img id="piece23" class="piece" src="images/squares/piece_07.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece15" class="piece" src="images/squares/piece_24.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece9" class="piece" src="images/squares/piece_09.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece24" class="piece" src="images/squares/piece_17.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece11" class="piece" src="images/squares/piece_11.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece1" class="piece" src="images/squares/piece_12.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			
+			<div class="container">
+				<img id="piece13" class="piece" src="images/squares/piece_13.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece14" class="piece" src="images/squares/piece_14.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece8" class="piece" src="images/squares/piece_04.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece21" class="piece" src="images/squares/piece_16.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece7" class="piece" src="images/squares/piece_10.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece18" class="piece" src="images/squares/piece_18.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			
+			<div class="container">
+				<img id="piece2" class="piece" src="images/squares/piece_19.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece20" class="piece" src="images/squares/piece_02.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece16" class="piece" src="images/squares/piece_21.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece5" class="piece" src="images/squares/piece_05.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece17" class="piece" src="images/squares/piece_23.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+			<div class="container">
+				<img id="piece4" class="piece" src="images/squares/piece_08.jpg" draggable="true" ondragstart="drag(event)">
+			</div>
+		</div>
+		
+		<div class="puzzle">
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="place" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+	</main>
+	<footer>
+		<p> © 2025, Yonay Valdes.
+
+			This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+	   </p>	
+	</footer>
+</wrapper>
+
+</body>
+</html>
