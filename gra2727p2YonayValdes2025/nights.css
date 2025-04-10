@@ -1,0 +1,10 @@
+wrapper {
+	background: rgb(255,203,231);
+	background: radial-gradient(circle, rgba(255,203,231,1) 0%, rgba(204,250,255,1) 100%);
+}
+h1 {
+	text-shadow: #FFCBE7 -5px 0;
+}
+.descBox {
+	background: #CCFAFF;
+}
