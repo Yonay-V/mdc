@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cooking with Carl! | Yonay Valdes, 2025</title>
+<script src="js/picturefill.js"></script>
+<script src="js/matchmedia.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<style>
+	body{
+		--dark_color: black;
+		--light_color: #ECFEF4;
+		--main_color: #51F69E;
+		--secondary_color: #c5fcdf;
+		--accent_color: #FF8133;
+		margin:0;
+		padding:0;
+		background-color:var(--light_color);
+		font-family: "Inter", sans-serif;
+     }
+	wrapper{
+		display:block;
+		margin:0 auto;
+		background-color:var(--light_color);
+		padding: 1em;
+		margin: 1em;
+		box-sizing: border-box;
+		border: double var(--accent_color) 0.5em;
+		min-width: 350px;
+     }
+	header {
+		background-image: url("images/oranges-SM.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 50vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding: 1em;
+	}
+	a {
+		color: var(--accent_color);
+		text-decoration: underline solid var(--accent_color);
+	}
+	h1 {
+		font-size: 4em;
+		font-family: "Birthstone", cursive;
+		margin: 0;
+		color: var(--main_color);
+		text-shadow: var(--secondary_color) -3px 3px; 
+		text-decoration: none;
+	}
+	h2 {
+		font-size: 2em;
+		color: var(--main_color);
+		margin: 1em 0;
+	}
+	h3 {
+		font-size: 1em;
+		font-weight: 900;
+		margin: 0;
+	}
+	h3:hover {
+		color: var(--accent_color);
+		text-decoration: underline solid var(--accent_color);
+	}
+	p {
+		margin: 1em 0 0 0;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 1em 0;
+		margin: 0;
+		border-bottom: solid var(--accent_color) 0.3vh;
+	}
+	li {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 1.5em;
+		font-weight: 800;
+		color: var(--secondary_color);
+		margin: 0;
+	}
+	li:hover {
+		color: var(--accent_color);
+		text-decoration: underline solid var(--accent_color);
+	}
+	figure {
+		margin: 0;
+	}
+	figure div img {
+		display: block;
+		width: 100%;
+	}
+	main {
+		display:grid;
+		gap: 1em;
+		grid-template-columns: repeat(auto-fit, 1fr);
+		padding: 1em 0;
+	}
+	.card {
+		padding: 1em;
+		width: auto;
+		background-color: #FFF8EB;
+		box-sizing: border-box;
+		overflow: hidden;
+		box-shadow: 0 0 5px 0px #888;
+	}
+	.card img {
+		width: 100%;
+		margin-bottom: 1em;
+		box-shadow: 0 0 5px 0px #111;
+		background-size: cover;
+		transition: all 400ms;
+	}
+	
+	.card img:hover {
+		transform: scale(0.97);
+	}
+	
+	footer {
+		border-top: solid var(--accent_color) 0.5vh;
+		padding-top: 1em;
+	}
+	@media (min-width: 50em) {
+		h1 {
+			font-size: 6em;
+			text-shadow: var(--secondary_color) -3px 3px;
+		}
+		header {
+			background-image: url("images/oranges-MD.jpg");
+		}
+		p {
+		color: var(--dark_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+		}
+		.card_tall {
+			grid-row: span 2 / auto;
+		}
+		.card_wide {
+			grid-column: span 2 / auto;
+		}
+	}
+	@media (min-width: 65em) {
+		h1 {
+			font-size: 8em;
+			text-shadow: var(--secondary_color) -4px 4px;
+		}
+		header {
+			background-image: url("images/oranges-MD.jpg");
+		}
+		p {
+		color: var(--dark_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+		}
+	}	
+	@media (min-width: 80em) {
+		h1 {
+			font-size: 10em;
+			text-shadow: var(--secondary_color) -5px 5px;
+		}
+		header {
+			background-image: url("images/oranges-LG.jpg");
+		}
+		p {
+		color: var(--dark_color);
+	}
+		ul {
+			flex-direction: row;
+		}
+		main {
+			grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+		}
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+	<header>
+		<h1>Cooking with Carl!</h1>
+		<nav>
+			<ul>
+				<li>Recipes</li>
+				<li>Blog</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+<!-- 
+		<figure id="banner">
+		  <div data-picture data-alt="Oranges">
+			  <div data-src="images/oranges-SM.jpg"></div>
+			  <div data-src="images/oranges-MD.jpg" data-media="(min-width: 32em)"></div>
+			  <div data-src="images/oranges-LG.jpg" data-media="(min-width: 72em)"></div>
+			<noscript>
+			  <img src="images/oranges-SM.jpg" id="banner_img" alt="Oranges" />
+			</noscript>
+		  </div>
+		</figure>
+-->
+	</header>
+	
+	<main>
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Ramen">
+				  <div data-src="images/ramen-SM.jpg"></div>
+				  <div data-src="images/ramen-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/ramen-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/kimchi-SM.jpg" alt="Ramen" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Ramen</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Ramen Toppings">
+				  <div data-src="images/ramen_egg-SM.jpg"></div>
+				  <div data-src="images/ramen_egg-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/ramen_egg-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/ramen_egg-SM.jpg" alt="Ramen Toppings" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Ramen Toppings</h3>
+		</div>
+		
+		
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Dimsum">
+				  <div data-src="images/dimsum-SM.jpg"></div>
+				  <div data-src="images/dimsum-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/dimsum-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/dimsum-SM.jpg" alt="Dimsum" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Dimsum</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Egg">
+				  <div data-src="images/egg-SM.jpg"></div>
+				  <div data-src="images/egg-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/egg-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/kimchi-SM.jpg" alt="Egg" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Eggs</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Curry">
+				  <div data-src="images/curry-SM.jpg"></div>
+				  <div data-src="images/curry-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/curry-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/curry-SM.jpg" alt="Curry" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Curry</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Kimchi">
+				  <div data-src="images/kimchi-SM.jpg"></div>
+				  <div data-src="images/kimchi-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/kimchi-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/kimchi-SM.jpg" alt="Kimchi" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Kimchi</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Waffles">
+				  <div data-src="images/waffles-SM.jpg"></div>
+				  <div data-src="images/waffles-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/waffles-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/waffles-SM.jpg" alt="Waffles" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Waffles</h3>
+		</div>
+		
+		<div class="card">
+			<figure>
+			  <div data-picture data-alt="Salad">
+				  <div data-src="images/salad-SM.jpg"></div>
+				  <div data-src="images/salad-MD.jpg" data-media="(min-width: 32em)"></div>
+				  <div data-src="images/salad-LG.jpg" data-media="(min-width: 72em)"></div>
+				<noscript>
+				  <img src="images/salad-SM.jpg" alt="Salad" />
+				</noscript>
+			  </div>
+			</figure>
+			<h3>Salad</h3>
+		</div>
+	</main>
+	<footer>
+		All images by <a href="https://unsplash.com/@charlesdeluvio">Charles Deluvio</a>.
+		<p>
+		© 2025, Yonay Valdes <br>
+		This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+		</p>
+	</footer>
+</wrapper>
+</body>
+</html>
