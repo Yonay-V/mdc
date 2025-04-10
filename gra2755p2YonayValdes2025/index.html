@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ares Athletic Shoes | Yonay Valdes, 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body, html {
+	    height: 100vh;
+		font-family: "IBM Plex Sans", sans-serif;
+	}
+	wrapper {
+		height: 100vh;
+		margin: 0 auto;
+		display: block;
+		perspective: 1px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 3;
+		perspective: 200px;
+		display: flex;
+		justify-content: space-around;
+		background-color: white;
+		height: 10vh;
+	}
+	h1 {
+		font-size: 4em;
+		align-self: center;
+		font-family: "Bebas Neue", sans-serif;
+	}
+	h2 {
+		font-size: 3em;
+		background-color: rgba(255,255,255,0.5);
+		padding: 2em;
+		font-family: "Bebas Neue", sans-serif;
+	}
+	nav {
+		display: flex;
+		align-content: center;
+		gap: 4em;
+	}
+	ul {
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		gap: 4em;
+	}
+	li {
+		text-decoration: none;
+		align-self: center;
+		font-size: 1.5em;
+	}
+	li:hover {
+		text-decoration: underline black solid;
+	}
+	.search {
+		border-radius: 25px;
+		height: 4vh;
+		padding: 1.5em;
+		box-sizing: border-box;
+		align-self: center;
+		border: black solid 2px;
+	}
+	/* Micro Lecture Version */
+	section {
+		height: 100vh;
+		background-size: cover;
+		box-shadow: 0 0 5px 5px black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.green {
+		background-image: url("green_shoes.jpg");
+		transform: translateZ(-10px) scale(11);
+		margin-top: 600px;
+	}
+	.red {
+		background-image: url("red_shoes.jpg");
+		transform: translateZ(-5px) scale(6);
+		margin-top: 6000px;
+	}
+	.yellow {
+		background-image: url("yellow_shoes.jpg");
+		transform: translateZ(-1px) scale(2);
+		margin-top: 500px;
+	}
+	footer {
+		padding: 4em;
+	}
+	/* YouTube Video
+	.parallax_wrapper {
+		display: block;
+		height: 100vh;
+		perspective: 200px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	div {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	.parallax_group {
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		transform-style: preserve-3d;
+		box-shadow: 0 0 5px 5px black;
+	}
+	.parallax_layer {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.first {
+		height: 100vh;
+		background-image: url("green_shoes.jpg");
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateZ(-200px) scale(2);
+	}
+	.second {
+		background-image: url("red_shoes.jpg");
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateZ(-150px) scale(1.75);
+	}
+	.third {
+		height: 100vh;
+		background-image: url("yellow_shoes.jpg");
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transform: translateZ(-100px) scale(1.5);
+	}
+	.background {
+		/* scale calc: 1 + ((Z transform value * -1) / perspective) */ /*
+		transform: translateZ(-300px) scale(2);
+	}
+	.foreground {
+		transform: translateZ(200px) scale(0.5);
+	}
+	#first {
+		z-index: -2;
+	}
+	
+	#second {
+		z-index: -1;
+	}
+	
+	#third {
+		z-index: 0;
+	}
+	End of YouTube Video */
+	/*
+	section {
+		width: 100%;
+		height: 100vh;
+	}
+	section:nth-of-type(1) {
+		background: red;
+		transform: translateZ(-10px) scale(11);
+	}
+	section:nth-of-type(2) {
+		background: green;
+		transform: translateZ(-5px) scale(6);
+	}
+	section:nth-of-type(3) {
+		background: blue;
+		transform: translateZ(-1px) scale(2);
+	}
+	*/
+</style>
+</head>
+<body>
+	<header>
+		<h1>Ares</h1>
+		<nav>
+			<ul>
+				<li>New</li>
+				<li>Men</li>
+				<li>Women</li>
+				<li>Kids</li>
+			</ul>
+			<input type="text" placeholder="Search" class="search">
+		</nav>
+	</header>
+<wrapper>
+		<section class="green">
+			<h2>We have green shoes!</h2>
+		</section>
+		<section class="red">
+		 <h2>And red shoes!</h2>
+		</section>
+		<section class="yellow">
+			<h2>And even YELLOW shoes!</h2>
+		</section>
+</wrapper>
+	<footer>
+		<p>
+			Yonay Valdes, 2025<br>
+		 	This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+		</p>
+	</footer>
+</body>
+</html>
