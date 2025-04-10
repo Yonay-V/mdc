@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Fruit | Yonay Valdes, 2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+<style type="text/css">
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #ccc;
+		font-family: "Manrope", sans-serif;
+	}
+	wrapper {
+		width: 1366px;
+		display: block;
+		margin: 0 auto;
+		padding: 25px;
+		background-color: #fff;
+		text-align: center;
+	}
+	
+	section {
+		padding: 25px 0;
+		border-bottom: #f5f5f7 solid 2px;
+	}
+	
+	h1, h2, h3 {
+		margin: 0;
+	}
+	
+	h1 {
+		font-size: 36px;
+	}
+	
+	h2 {
+		font-size: 32px;
+	}
+	
+	h3 {
+		font-size: 24px;
+	}
+	
+	p {
+		font-size: 16px;
+	}
+	
+	nav {
+		border-radius: 8px;
+		margin: 25px 0 50px;	
+	}
+	
+	ul {
+		margin: 0;
+		padding: 5px 15px;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+	}
+	
+	li {
+		display: inline-block;
+		font-size: 18px;
+		font-weight: 800;
+		vertical-align: middle;
+	}
+	
+	li a {
+		text-decoration: none;
+		color: black;
+	}
+	
+	a:hover{
+		color: dodgerblue;
+		text-decoration: underline;
+	}
+	
+	.banner {
+		background-color: lightgray;
+		height: 300px;
+		border-radius: 25px;
+		margin: 25px 0;
+	}
+	
+	#home {
+		text-align: center;
+		font-size: 36px;
+		padding:  0  0 50px;
+	}
+	
+	#home .banner {
+		background-image: url("images/iphone16ProBannerLong.jpg");
+		width: 1366px;
+		height: 263px;
+	}
+	
+	
+	#software .banner {
+		width: 1366px;
+		height: 524px;
+	}
+	
+	#software {
+		background-color: #f5f5f7;
+	}
+	
+	#software .text {
+		display: flex;
+		justify-content: space-around;
+		
+	}
+	#software .text p {
+		border-left: black solid 1px;
+		text-align: left;
+		font-size: 20px;
+		padding: 25px;
+		margin: 25px;
+	}
+	
+	#accesories .banner {
+		background-image: url("images/iphone-magsafe-accessories.png");
+		width: 1336px;
+		height: 445px;
+		position: relative;
+	}
+	
+	#accesories .banner-text {
+		top: 110px;
+		left: 850px;
+		position: absolute;}
+	
+	.banner-text h2, .banner-text h3, .banner-text p {
+		text-align: left;
+		margin: 25px 0;
+	}
+	
+	.banner-text p {
+		color: dodgerblue;
+	}
+	
+	.banner-text p:hover {
+		text-decoration: underline;
+	}
+	
+	.cards {
+		display: flex;
+		justify-content: space-around;
+		margin: 50px auto;
+		width: 1300px;
+	}
+	.card {
+		width: 350px;
+		height: 700px;
+		display: inline-block;
+		background-color: #f5f5f7;
+		border-radius: 25px;
+		text-align: center;
+	}
+	
+	.card h2, .card h3, .card p, .card-big h3, .card-big p {
+		margin: 15px;
+		text-align: center;
+	}
+	
+	.card img {
+		height: 400px;
+		margin: 25px auto;
+		display: block;
+	}
+	
+	.buy {
+		background-color: dodgerblue;
+		color: white;
+		border: dodgerblue 2px solid;
+		display: inline-block;
+		border-radius: 20px;
+		padding: 10px 20px;
+	}
+	
+	.buy:hover {
+		background-color: #f5f5f7;
+		color: dodgerblue;
+	}
+	
+	.card-big {
+		width: 700px;
+		height: 700px;
+		display: inline-block;
+		background-color: #f5f5f7;
+		border-radius: 25px;
+		text-align: center;
+	}
+	
+	.card-big img {
+		height: 400px;
+		margin: 25px auto;
+		display: block;
+	}
+	
+	.icons {
+		display: flex;
+		justify-content: space-around;
+		margin: 50px 200px;
+		text-align: center;
+	}
+	
+	.icons img {
+		width: 100px;
+		height: 100px;	
+	}
+	
+	.icons p:hover {
+		color: dodgerblue;
+	}
+	
+	.search {
+		display: block;
+		width: 500px;
+		height: 35px;
+		border-radius: 25px;
+		margin: 30px auto;
+		padding-left: 25px;
+	}
+	
+	footer {
+		padding: 25px;
+		background-color: #f5f5f7;
+		border-radius: 20px;
+		margin: 25px 0 0;
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+	<section id="home">
+		<nav>			
+			<ul>
+				<li><a href="#home">
+					<span class="logoSVG">
+						<svg height="20" viewBox="0 12 17 20" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+						</svg>
+					</span>
+				</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#accesories">Accesories</a></li>
+				<li><a href="#software">Software</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+		</nav>
+		<div class="banner">		
+		</div>
+		<h1>Hello, meet your new fPhone.</h1>
+	</section>
+	
+	<section id="products">
+		<nav>
+			<ul>
+				<li><a href="#home">
+					<span class="logoSVG">
+						<svg height="20" viewBox="0 12 17 20" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+						</svg>
+					</span>
+				</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#accesories">Accesories</a></li>
+				<li><a href="#software">Software</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+		</nav>
+		<h2>The fastest and fantasticest</h2>
+		<div class="cards">
+			<div class="card">
+				<img src="images/iphone_16pro.png">
+				<h2>fPhone 16 Pro</h2>
+				<h3>The most fantastic</h3>
+				<p>Starting at $600</p>
+				<p class="buy">BUY!!!</p>
+			</div>
+			<div class="card">
+				<img src="images/iphone_16.png">
+				<h2>fPhone 16</h2>
+				<h3>Also fantastic</h3>
+				<p>Starting at $400</p>
+				<p class="buy">BUY!!!</p>
+			</div>
+			<div class="card">
+				<img id="iphoneSE" src="images/iphone_se.png">
+				<h2>fPhone Small</h2>
+				<h3>Fantastic but small</h3>
+				<p>Starting at $200</p>
+				<p class="buy">BUY!!!</p>
+			</div>
+		</div>
+		
+	</section>
+	
+	<section id="accesories">
+		<nav>
+			<ul>
+				<li><a href="#home">
+					<span class="logoSVG">
+						<svg height="20" viewBox="0 12 17 20" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+						</svg>
+					</span>
+				</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#accesories">Accesories</a></li>
+				<li><a href="#software">Software</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+		</nav>
+		
+		<div class="banner">
+			<div class="banner-text">
+				<h2>
+					Every fPhone has its match.<br> Find yours today.
+				</h2>
+				<h3>
+					We have cases and chargers and<br> wallets and cases and chargers and wallets and...
+				</h3>
+				<p>Shop Now</p>
+			</div>
+			
+		</div>
+		<div class="cards">
+			<div class="card-big">
+				<img src="images/iphone16proClearCase.png">
+				<h3>fPhone 16 Pro Clear Case</h3>
+				<p>$20</p>
+				<p class="buy">Buy!!!</p>
+			</div>
+			<div class="card">
+				<img src="images/iphone16Case.png">
+				<h3>fPhone 16  Case</h3>
+				<p>$20</p>
+				<p class="buy">Buy!!!</p>
+			</div>
+		</div>
+		
+
+	</section>
+	
+	<section id="software">
+		<nav>
+			<ul>
+				<li><a href="#home">
+					<span class="logoSVG">
+						<svg height="20" viewBox="0 12 17 20" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+						</svg>
+					</span>
+				</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#accesories">Accesories</a></li>
+				<li><a href="#software">Software</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+		</nav>
+		<div class="banner">
+			<img src="images/ios18bannerOG.jpg">		
+		</div>
+		<h2>fOS 18</h2>
+		<h3>its better now</h3>
+		<div class="text">
+			<p>
+				Introducing fOs 18—because your phone clearly needed more ways to express your “unique” personality. With over 1,000 themes to choose from, you can finally transform your home screen into a chaotic masterpiece that screams, “Look at me! I’m different!”
+			</p>
+			<p>
+				Our AI assistant has leveled up too. It’s so smart, it might start making life choices for you—like signing you up for pottery classes you never wanted. And yes, you can set your notifications to sound like a 90s dial-up modem—because who wouldn’t want to relive that delightful wait for the internet?
+			</p>
+
+			<p>
+				Update now and dive into a world of customization where your phone is as quirky as your collection of novelty socks! Just remember: more options = more decisions you didn’t want to make. Enjoy!
+			</p>
+		</div>
+		
+	</section>
+	
+	<section id="support">
+		<nav>
+			<ul>
+				<li><a href="#home">
+					<span class="logoSVG">
+						<svg height="20" viewBox="0 12 17 20" width="17" xmlns="http://www.w3.org/2000/svg">
+							<path d="m15.5752 19.0792a4.2055 4.2055 0 0 0 -2.01 3.5376 4.0931 4.0931 0 0 0 2.4908 3.7542 9.7779 9.7779 0 0 1 -1.2755 2.6351c-.7941 1.1431-1.6244 2.2862-2.8878 2.2862s-1.5883-.734-3.0443-.734c-1.42 0-1.9252.7581-3.08.7581s-1.9611-1.0589-2.8876-2.3584a11.3987 11.3987 0 0 1 -1.9373-6.1487c0-3.61 2.3464-5.523 4.6566-5.523 1.2274 0 2.25.8062 3.02.8062.734 0 1.8771-.8543 3.2729-.8543a4.3778 4.3778 0 0 1 3.6822 1.841zm-6.8586-2.0456a1.3865 1.3865 0 0 1 -.2527-.024 1.6557 1.6557 0 0 1 -.0361-.337 4.0341 4.0341 0 0 1 1.0228-2.5148 4.1571 4.1571 0 0 1 2.7314-1.4078 1.7815 1.7815 0 0 1 .0361.373 4.1487 4.1487 0 0 1 -.9867 2.587 3.6039 3.6039 0 0 1 -2.5148 1.3236z"></path>
+						</svg>
+					</span>
+				</a></li>
+				<li><a href="#products">Products</a></li>
+				<li><a href="#accesories">Accesories</a></li>
+				<li><a href="#software">Software</a></li>
+				<li><a href="#support">Support</a></li>
+			</ul>
+		</nav>
+		<h2>Support</h2>
+		<div class="icons">
+			<div><img class="icon" src="images/forgorPassword.svg">
+			<p>Forgot passcode</p></div>
+			<div class="icon"><img src="images/accountPassword.svg">
+			<p>Forgot account password</p></div>
+			<div class="icon"><img src="images/subscriptionsRefunds.svg">
+			<p>Subscriptions and Refunds</p></div>
+			<div class="icon"><img src="images/findMy.svg">
+			<p>Find My fPhone</p></div>
+		</div>
+		<h3>Search our FAQ</h3>
+		<form>
+			<input class="search" placeholder="Search">
+		</form>
+	</section>
+	<footer>
+		<p>© 2024, Yonay Valdes. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+	
+</wrapper>
+</body>
+</html>
