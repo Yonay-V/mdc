@@ -1,0 +1,191 @@
+@charset "utf-8";
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+	color: white;
+	font-family: "Chelsea Market", system-ui;
+}
+wrapper {
+    display: block;
+    width: 1366px;
+    margin: 0 auto;
+    background: url("noise-light.png");
+	padding: 20px;
+}
+	
+h1{
+		font-size: 4em;
+		margin: 0;
+}
+h2 {
+		font-size: 3em;
+		font-weight: 600;
+		margin: 0 0 5px;
+}
+h3 {
+		font-size: 2em;
+		font-weight: 400;
+		margin: 0 0 5px;
+}
+
+p {
+	margin: 0;
+	line-height: 1.5;
+}
+	
+ul {
+	padding-left: 15px;
+	margin: 0;
+	line-height: 1.5;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	width: 40vw;
+	align-items: flex-end;
+}
+
+nav ul li {
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+	nav ul li:hover {
+		text-decoration: underline;
+	}
+main {
+	display: flex;
+	justify-content: flex-start;
+	margin: 25px 0;
+}
+form {
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+form div {
+	width: 45%;
+	padding: 2.5%;
+}
+
+input {
+	display: inline-block;
+	width: 100%;
+	box-sizing: border-box;
+	height: 60px;
+	padding: 10px;
+	border-radius: 20px;
+	margin: 5px 0 25px;
+	border: black solid 3px;
+	font-family: "Chelsea Market", system-ui;
+}
+label {
+	margin-left: 13px;
+	font-size: 1.3em;
+	vertical-align: top;
+}
+
+.checkbox {
+	width: 5%;
+	height: 5%;
+	margin: 0 10px;
+}
+
+.radio {
+	width: 5%;
+	height: auto;
+	display: inline-block;
+	margin: 0 10px;
+	vertical-align: text-bottom;
+}
+
+.radioGroup{
+	padding: 0;
+}
+
+.submitButton {
+	width: 95%;
+	font-size: 1.5em;
+}
+
+.doubleInput{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		box-sizing: border-box;
+		padding: 0;
+}
+.c-marquee {
+	font-size: 2rem;
+	letter-spacing: 2px;
+	min-width: 100%;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+}
+.c-marquee,.c-marquee div {
+	align-items: center;
+	display: flex
+}
+@keyframes marquee {
+	0% {
+		margin-left: 0
+	}
+
+	to {
+		transform: translateX(-100%)
+	}
+}         
+.c-panel__marquee {
+	border: 1px solid hsla(0,0%,100%,.3);
+	border-radius: 12px;
+	padding-bottom: .5rem;
+	padding-top: .5rem
+}
+.c-panel__marquee div {
+	animation: marquee 5s linear infinite;
+}
+	
+.mymarquee {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+	font-size: 2rem;
+	letter-spacing: 10px;
+}
+.fastmarquee div {
+	animation: leftmarquee 3s linear infinite;
+}
+.slowmarquee div{
+	animation: rightmarquee 5s linear infinite;
+}
+@keyframes leftmarquee {
+	0% {
+		margin-left: 0;
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes rightmarquee {
+from {
+	transform: translateX(-100%);
+}
+
+to {
+50% {
+	transform: translateX(100%);
+	transform: translateX(100%);
+}
+}
+.mymarquee div:hover {
+    animation-play-state: paused;
+  }
