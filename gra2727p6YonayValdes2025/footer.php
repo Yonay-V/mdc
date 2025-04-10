@@ -1,0 +1,3 @@
+<footer>
+	<p>© <?php echo $dates; ?>, Yonay Valdes. This is a fictitious web page created by Yonay Valdes Here solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+</footer>
