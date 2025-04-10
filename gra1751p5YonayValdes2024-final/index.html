@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	
+<title>Keeper | Yonay Valdes, 2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Libre+Barcode+39+Text&display=swap" rel="stylesheet">
+
+<style>
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+	color: white;
+	font-family: "Chelsea Market", system-ui;
+}
+wrapper {
+    display: block;
+    width: 1366px;
+    margin: 0 auto;
+    background: url("images/noise-light.png");
+	padding: 20px;
+}
+	
+h1{
+		font-size: 4em;
+		margin: 0;
+}
+h2 {
+		font-size: 3em;
+		font-weight: 600;
+		margin: 0 0 5px;
+}
+h3 {
+		font-size: 2em;
+		font-weight: 400;
+		margin: 0 0 5px;
+}
+
+p {
+	margin: 0;
+	line-height: 1.5;
+}
+	
+ul {
+	padding-left: 15px;
+	margin: 0;
+	line-height: 1.5;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	width: 40vw;
+	align-items: flex-end;
+}
+
+nav ul li {
+	text-decoration: none;
+	font-size: 1.5rem;
+}
+	nav ul li:hover {
+		text-decoration: underline;
+	}
+main {
+	display: flex;
+	justify-content: flex-start;
+	margin: 25px 0;
+}
+	
+section {
+    width: 512px;
+	height: 768px;
+	margin: 0 50px 0 0;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+	
+.apparel {
+    position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.apparel div {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    visibility: hidden;
+}
+.apparel a {
+	display: block;
+}
+.apparel div img {
+    width: 512px;
+    height: 768px;
+	display: block;
+	border-radius: 10px;
+}
+	
+	.information {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 768px;
+	}	
+.colors {
+	margin-bottom: 15px;
+}
+.colors button {
+	width: 40px;
+	height: 40px;
+	border-radius: 25px;
+	border: gray solid thick;
+	margin-right: 15px;
+}
+.colors button:hover {
+	border: black solid thick;
+}
+.white {
+    backgraound-color: #f1f1f3;
+}
+.salmon {
+    background-color: #f0c8c4;
+}
+.sky {
+    background-color: #b0c8e8;
+}
+	
+.sizes {
+	margin:0;
+}
+.sizes button {
+	width: 50px;
+	height: 50px;
+	font-size: 1.5rem;
+	font-family: "Chelsea Market", system-ui;
+}
+.quantity {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 425px;
+}
+#quantity {
+	height: 25px;
+	width: 75px;
+}
+.quantity label {
+	font-size: 2rem;
+}
+.quantity button {
+	font-size: 1.5rem;
+	font-family: "Chelsea Market", system-ui;
+}
+	
+.c-marquee {
+	font-size: 2rem;
+	letter-spacing: 2px;
+	min-width: 100%;
+	overflow: hidden;
+	position: relative;
+	white-space: nowrap;
+}
+.c-marquee,.c-marquee div {
+	align-items: center;
+	display: flex
+}
+@keyframes marquee {
+	0% {
+		margin-left: 0
+	}
+
+	to {
+		transform: translateX(-100%)
+	}
+}         
+.c-panel__marquee {
+	border: 1px solid hsla(0,0%,100%,.3);
+	border-radius: 12px;
+	padding-bottom: .5rem;
+	padding-top: .5rem
+}
+.c-panel__marquee div {
+	animation: marquee 5s linear infinite;
+}
+	
+.mymarquee {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: hidden;
+	padding-bottom: .5rem;
+	padding-top: .5rem;
+	font-size: 2rem;
+	letter-spacing: 10px;
+}
+.fastmarquee div {
+	animation: leftmarquee 3s linear infinite;
+}
+.slowmarquee div{
+	animation: rightmarquee 5s linear infinite;
+}
+@keyframes leftmarquee {
+	0% {
+		margin-left: 0;
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+@keyframes rightmarquee {
+from {
+	transform: translateX(-100%);
+}
+
+to {
+	50% {
+		transform: translateX(100%);
+		transform: translateX(100%);
+}
+}
+.mymarquee div:hover {
+    animation-play-state: paused;
+  }
+</style>
+	
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+</head>
+	
+<body onLoad="MM_preloadImages('images/shirtBackSalmon.jpg','images/shirtBackSky.jpg','images/shirtBackWhite.jpg')">
+<wrapper>
+<nav>
+	<h1>Keeper Clothing</h1>
+	<ul>
+	  <li>Latest</li>
+		<li>Men</li>
+		<li>Women</li>
+		<li>Kids</li>
+		<li>Sale</li>
+	</ul>
+</nav>
+
+<main>
+	<section class="apparel">
+<div style="visibility: visible"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('shirtWhite','','images/shirtBackWhite.jpg',1)"><img src="images/shirtFrontWhite.jpg" alt="White Shirt" width="512" height="768" id="shirtWhite"></a>
+  </div>
+<div ><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('shirtsalmonPink','','images/shirtBackSalmon.jpg',1)"><img src="images/shirtFrontSalmon.jpg" alt="Salmon Pink Shirt" width="512" height="768" id="shirtsalmonPink"></a></div>
+<div><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('shirtSkyBlue','','images/shirtBackSky.jpg',1)"><img src="images/shirtFrontSky.jpg" alt="Sky Blue Shirt" width="512" height="768" id="shirtSkyBlue"></a></div>
+
+</section>
+<section class="information">
+	<div class="minisection">
+		<h2>Classic T-Shirt</h2>
+		<h3>$19.99</h3>
+	</div>
+	
+	<div class="minisection">
+		<h3>Colors</h3>
+		<div class="colors">
+		  <button class="white" onClick="MM_showHideLayers('shirtWhite','','show','shirtsalmonPink','','hide','shirtSkyBlue','','hide')"></button>
+		  <button class="salmon" onClick="MM_showHideLayers('shirtWhite','','hide','shirtsalmonPink','','show','shirtSkyBlue','','hide')"></button>
+		  <button class="sky" onClick="MM_showHideLayers('shirtWhite','','hide','shirtsalmonPink','','hide','shirtSkyBlue','','show')"></button>
+		</div>
+	</div>
+	
+	<div>
+		<h3>Sizes</h3>
+		<div class="sizes">
+		  <button>XS</button>
+		  <button>S</button>
+		  <button>M</button>
+		  <button>L</button>
+		  <button>XL</button>
+		</div>
+	</div>
+
+	<div class="quantity minisection">
+		<label for="quantity">Quantity:</label>
+		<input id="quantity" type="number">
+		<button>Add to Cart</button>
+	</div>
+	
+	<div class="minisection">
+		<h3>Design</h3>
+		<p>Our classic t-shirt is the culmination of many years of drafting, engineering, and imagining what the perfect t-shirt could be. This is our keeper. </p>
+	</div>
+	
+	<div class="minisection">
+		<h3>Details</h3>
+		<ul>
+		  <li>100% Cotton</li>
+		  <li>Classic Fit</li>
+		  <li>Flattering Silhouette</li>
+		  <li>Beautiful Colors</li>
+			<li>A keeper</li>
+		</ul>
+	</div>
+</section>
+</main>
+	<div class="mymarquee fastmarquee">
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+	</div>	
+	<div class="mymarquee slowmarquee">
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+	</div>	
+	<div class="mymarquee fastmarquee">
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+		<div>KEEP&nbsp;IT&nbsp;</div>
+	</div>
+  <footer>
+    <p>© 2024, Yonay Valdes. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+  </footer>
+</wrapper>
+</body>
+</html>
