@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hello, I am David Bradley | Prints | Yonay Valdes, 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+<style>
+	:root {
+  --accent_color: #FF009D;
+}
+	body {
+		margin:0;
+		padding:0;
+		background-color:white;
+		font-family: "Playfair", serif;
+     }
+	wrapper {
+		width:90%;
+		max-width:1366px;
+		min-width:800px;
+		margin:0 auto;
+		background:#fff;
+		display:block;
+		padding: calc(10%/10);
+		border-left: var(--accent_color) 5em solid;
+    }
+	header {
+		padding-bottom: calc(10%/10);
+		border-bottom: var(--accent_color) solid thin;
+		margin: calc(10%/10);
+		margin-top: 0;
+	}
+	h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2em;
+		text-align: center;
+		margin: 0.75em 0 0 0;
+		padding: 0;
+	}
+	h3 {
+		margin: 0.5em 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		display: inline;
+		text-decoration: none;
+		font-size: 1.5em;
+		margin-right: 1em;
+	}
+	li:hover {
+		color:var(--accent_color);
+		text-decoration: underline;
+	}
+	.flex-container {
+		display:flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.image {
+		display: flex;
+		flex-direction: column;
+		width: 12em;
+		aspect-ratio: 3 / 7;
+    	margin: calc(10%/10);
+		position: relative;
+		border-bottom: black solid thin;
+	}
+	.image img {
+		width: 100%;
+		box-shadow: 0 0 2px 1px black;
+	}
+	
+	.image div {
+		margin: 1em 0 0 0;
+		position: absolute;
+		bottom: 0;
+	}
+	.image div p {
+		margin: 0;
+	}
+	.cart_button {
+		color:var(--accent_color);
+	}
+	.cart_button:hover{
+		color:black;
+		text-decoration: underline;
+	}
+	a {
+		color:var(--accent_color);
+	}
+	footer {
+		margin: calc(10%/10);
+		border-top: var(--accent_color) solid thin;
+	}
+	
+</style>
+</head>
+
+<body>
+<wrapper>
+	<header>
+		<h1>David Bradley<span style="color:#FF009D">.</span></h1>
+		<nav>
+			<ul>
+				<li>Home</li>
+				<li>Store</li>
+				<li>Works</li>
+				<li>About</li>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h2>Art Prints<span style="color:#FF009D">.</span></h2>
+		<div class="flex-container">
+			<div class="image">
+			<img src="images/building.jpg">
+			<h3>Building.</h3>
+				<div>
+					<p>$45</p>
+					<p class="cart_button">Add to Cart.</p>
+				</div>
+			
+		</div>
+		<div class="image">
+			<img src="images/alien_flowers.jpg">
+			<h3>Alien Flowers.</h3>
+			<div>
+				<p>$25</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		
+		<div class="image">
+			<img src="images/bw_building_2.jpg">
+			<h3>Black and White Building.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/highway.jpg">
+			<h3>Highway.</h3>
+			<div>
+				<p>$25</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		
+		<div class="image">
+			<img src="images/cat.jpg">
+			<h3>Cat.</h3>
+			<div>
+				<p>$45</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/crying_statue.jpg">
+			<h3>Cry.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/flower_garden.jpg">
+			<h3>Garden.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/flower_in_hand.jpg">
+			<h3>For you.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/person.jpg">
+			<h3>Light.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		
+		<div class="image">
+			<img src="images/signs.jpg">
+			<h3>Sign.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/bwbuilding.jpg">
+			<h3>Other Black and White Building.</h3>
+			<div>
+				<p>$45</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/umbrella.jpg">
+			<h3>Umbrella.</h3>
+			<div>
+				<p>$25</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/punching_glass.jpg">
+			<h3>Punch.</h3>
+			<div>
+				<p>$45</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/monster_plant.jpg">
+			<h3>Monster.</h3>
+			<div>
+				<p>$45</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		<div class="image">
+			<img src="images/hand.jpg">
+			<h3>Hand.</h3>
+			<div>
+				<p>$35</p>
+				<p class="cart_button">Add to Cart.</p>
+			</div>
+		</div>
+		</div>
+		
+	</main>
+	
+	<footer>
+		<p>All images are by <a href="https://unsplash.com/@dmytrobayer" target="_blank">Dmytro Bayer</a></p>
+		<p>© 2025, Yonay Valdes<br>
+		This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	</footer>
+</wrapper>
+</body>
+</html>
