@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Green Bin Gardening Shop | Yonay Valdes, 2025</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript">
+  $(document).ready(
+    function() {
+      $('#icon').click (
+        function() {
+          $('#nav').show();
+          $('#icon').hide();
+          $('#x_icon').show();
+        }
+  );
+  $('#x_icon').click (
+    function() {
+          $('#nav').hide();
+          $('#icon').show();
+          $('#x_icon').hide();
+        }
+      );
+    }
+  );
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+<style>
+	body {
+		--primary: #043405;
+		--secondary: #a2af9f;
+		--accent:#975500;
+		margin: 0;
+		font-family: "Playfair", serif;
+	}
+	wrapper {
+		width: 100%;
+		display: block;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: var(--secondary);
+	}
+	#icon {
+		width: 4em;
+		align-self: center;
+	}
+	#x_icon {
+		width: 4em;
+		align-self: center;
+	}
+	#nav {
+		align-self: center;
+		display: none;
+	}
+	#nav a {
+		text-decoration: none;
+	}
+	#nav li {
+		text-align: center;
+		margin: 1em;
+		color: var(--accent);
+	}
+	#nav li:hover {
+		text-decoration: underline var(--accent);
+	}
+	h1 {
+		font-size: 3em;
+		color: var(--accent);
+		text-align: center;
+		margin: 0;
+		font-weight: 800;
+	}
+	h3 {
+		color: var(--primary);
+		font-size: 2em;
+		font-weight: 600;
+		margin: 0;
+	}
+	h4 {
+		color: var(--accent);
+		font-size: 2em;
+		font-weight: 400;
+		margin: 0;
+	}
+	p {
+		font-family: "Lato", sans-serif;
+		margin: 0;
+	}
+	header {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: center;
+		padding-top: 3em;
+		gap: 2em;
+		background-color: var(--primary);
+	}
+	li {
+		font-size: 2em;
+		color: (--primary);
+	}
+	li:hover {
+		text-decoration: underline var(--primary);
+	}
+	.banner {
+		width: 100%;
+	}
+	main {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 2em; 
+	}
+	ul {
+		padding: 0;
+		list-style-type: none;
+	}
+	.container {
+		width: 100%;
+		margin-bottom: 2em;
+		padding: 8em;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		flex-direction: column;
+		text-align: center;
+		gap: 2em;
+	}
+	.container-img {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 2em;
+	}
+	.container-img img {
+		width: 100%;
+	}
+	footer {
+		padding: 0 4em 4em;
+	}
+	@media (min-width: 50em) {
+		main {
+			padding: 0 2em;
+		}
+		#nav {
+			display: contents;
+		}
+		#nav ul {
+			align-self: center;
+			display: flex;
+			width: 60%;
+			justify-content: space-between;
+		}
+		#icon {
+			display: none;
+		}
+		.container {
+			width: 50%;
+			padding: 4em;
+			gap: 1em;
+		}
+		.container-img {
+			width: 50%;
+		}
+		h3, h4 {
+			font-size: 1.5em;
+		}
+		li {
+			font-size: 1.5em;
+		}
+		footer {
+		padding: 2em 12em 4em;
+	}
+	}
+	@media (min-width: 70em) {
+		.container {
+			padding: 8em;
+		}
+		h3, h4 {
+			font-size: 2em;
+		}
+		li {
+			font-size: 2em;
+		}
+	}
+	@media (min-width: 100em) {
+		.container {
+			padding: 8em;
+		}
+		h3, h4 {
+			font-size: 3em;
+		}
+		li {
+			font-size: 2em;
+		}
+	}
+</style>
+</head>
+
+<body>
+<wrapper>
+	<header>
+		<h1>Green Bin Gardening Shop</h1>
+		<img id="icon" src="images/menu.png" alt="Navigation icon. Click to expand navigation menu."/>
+		<img id="x_icon" src="images/x.png" alt="Exit out icon. Click to close navigation menu." style="display: none;" />
+		<nav id="nav">
+		  <ul>
+			<a href="#about_us" id="about_us_link"><li>About Us</li></a>
+			<a href="#blogs" id="blogs_link"><li>Blogs</li></a>
+			<a href="#contact_us" id="contact_us_link"><li>Contact Us</li></a>
+		  </ul>
+		</nav>
+		<img class="banner" src="images/gardening-tomatoes.jpg">
+	</header>
+	<main>
+		<div class="container">
+			<h3>You can have a green thumb!</h3>
+			<h4>We have everything you need to start gardening!</h4>
+			<h4>Shop...</h4>
+			<ul>
+			 	<li>Plants</li>
+				<li>Fertilizer</li>
+				<li>Tools</li>
+				<li>Pots</li>
+			</ul>
+		</div>
+		<div class="container-img"><img src="images/pots.jpg"></div>
+		<div class="container-img"><img src="images/indoor.jpg"></div>
+		<div class="container">
+			<h3>The outdoors not your style?</h3>
+			<h4>We have indoor plants too!</h4>
+			<h4>Shop...</h4>
+			<ul>
+			 	<li>Plants</li>
+				<li>Fertilizer</li>
+				<li>Tools</li>
+				<li>Pots</li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<p>
+			© 2025, Yonay Valdes <br>
+			This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.
+		</p>
+	</footer>
+</wrapper>
+</body>
+</html>
