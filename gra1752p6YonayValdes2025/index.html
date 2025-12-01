@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+
+<!-- Created with Ai->Canvas Export Plug-In Version 1.8 (PC/64) -->
+<!-- By Mike Swanson (http://blog.mikeswanson.com/)             -->
+
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <title>Windy Day | Yonay Valdes, 2025</title>
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="Ai2CanvasAnimation.js"></script>
+  <script>
+
+    // Main canvas and context references
+    var canvas;
+    var ctx;
+
+    // Frames per second
+    var fps = 60.0;
+
+    // Animations
+    var animations = [ new cloud3Path(), new cloud1Path(), new cloud2Path(), new cloud4Path() ];
+
+    function cloud3Path() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-281.2, 156.1], [349.4, 156.1], [979.9, 156.1], [1629.6, 156.1] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.03, 0.03], [0, 0.05, 0.05], [0, 0.08, 0.08], 
+                    [0, 0.11, 0.11], [0, 0.13, 0.13], [0, 0.16, 0.16], [0, 0.19, 0.18], 
+                    [0, 0.21, 0.21], [0, 0.24, 0.24], [0, 0.27, 0.26], [0, 0.29, 0.29], 
+                    [0, 0.32, 0.32], [0, 0.35, 0.34], [0, 0.37, 0.37], [0, 0.40, 0.39], 
+                    [0, 0.42, 0.42], [0, 0.45, 0.45], [0, 0.48, 0.47], [0, 0.50, 0.50], 
+                    [0, 0.53, 0.53], [0, 0.56, 0.55], [0, 0.58, 0.58], [0, 0.61, 0.61], 
+                    [0, 0.64, 0.63], [0, 0.66, 0.66], [0, 0.69, 0.68], [0, 0.71, 0.71], 
+                    [0, 0.74, 0.74], [0, 0.77, 0.76], [0, 0.79, 0.79], [0, 0.82, 0.82], 
+                    [0, 0.84, 0.84], [0, 0.87, 0.87], [0, 0.90, 0.89], [0, 0.92, 0.92], 
+                    [0, 0.95, 0.95], [0, 0.97, 0.97], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(20.00, 0.00, 1, false, 0, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function cloud1Path() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-290.5, 404.8], [328.9, 404.8], [948.4, 404.8], [1586.7, 404.8] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.03, 0.03], [0, 0.05, 0.05], [0, 0.08, 0.08], 
+                    [0, 0.11, 0.11], [0, 0.14, 0.14], [0, 0.16, 0.16], [0, 0.19, 0.19], 
+                    [0, 0.22, 0.22], [0, 0.25, 0.24], [0, 0.27, 0.27], [0, 0.30, 0.30], 
+                    [0, 0.33, 0.32], [0, 0.35, 0.35], [0, 0.38, 0.38], [0, 0.41, 0.41], 
+                    [0, 0.44, 0.43], [0, 0.46, 0.46], [0, 0.49, 0.49], [0, 0.52, 0.51], 
+                    [0, 0.54, 0.54], [0, 0.57, 0.57], [0, 0.60, 0.59], [0, 0.63, 0.62], 
+                    [0, 0.65, 0.65], [0, 0.68, 0.68], [0, 0.71, 0.70], [0, 0.73, 0.73], 
+                    [0, 0.76, 0.76], [0, 0.79, 0.78], [0, 0.81, 0.81], [0, 0.84, 0.84], 
+                    [0, 0.87, 0.86], [0, 0.89, 0.89], [0, 0.92, 0.92], [0, 0.95, 0.95], 
+                    [0, 0.97, 0.97], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(15.00, 5.00, 1, false, 0, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function cloud2Path() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-541.5, 236.4], [227.5, 236.4], [996.5, 236.4], [1788.8, 236.4] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.02, 0.02], [0, 0.04, 0.04], [0, 0.07, 0.07], 
+                    [0, 0.09, 0.09], [0, 0.11, 0.11], [0, 0.13, 0.13], [0, 0.15, 0.15], 
+                    [0, 0.18, 0.17], [0, 0.20, 0.20], [0, 0.22, 0.22], [0, 0.24, 0.24], 
+                    [0, 0.26, 0.26], [0, 0.29, 0.28], [0, 0.31, 0.30], [0, 0.33, 0.33], 
+                    [0, 0.35, 0.35], [0, 0.37, 0.37], [0, 0.39, 0.39], [0, 0.42, 0.41], 
+                    [0, 0.44, 0.43], [0, 0.46, 0.46], [0, 0.48, 0.48], [0, 0.50, 0.50], 
+                    [0, 0.53, 0.52], [0, 0.55, 0.54], [0, 0.57, 0.57], [0, 0.59, 0.59], 
+                    [0, 0.61, 0.61], [0, 0.63, 0.63], [0, 0.66, 0.65], [0, 0.68, 0.67], 
+                    [0, 0.70, 0.70], [0, 0.72, 0.72], [0, 0.74, 0.74], [0, 0.76, 0.76], 
+                    [0, 0.79, 0.78], [0, 0.81, 0.80], [0, 0.83, 0.83], [0, 0.85, 0.85], 
+                    [0, 0.87, 0.87], [0, 0.89, 0.89], [0, 0.91, 0.91], [0, 0.94, 0.93], 
+                    [0, 0.96, 0.96], [0, 0.98, 0.98], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(12.00, 3.00, 1, false, 0, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function cloud4Path() {
+
+      // Control and anchor points
+      this.points = [
+                    [ [-567.8, 494.6], [201.2, 494.6], [970.2, 494.6], [1762.5, 494.6] ]
+                    ];
+
+      // Linear motion index
+      this.linear = [
+                    [0, 0.00, 0.00], [0, 0.02, 0.02], [0, 0.04, 0.04], [0, 0.07, 0.07], 
+                    [0, 0.09, 0.09], [0, 0.11, 0.11], [0, 0.13, 0.13], [0, 0.15, 0.15], 
+                    [0, 0.18, 0.17], [0, 0.20, 0.20], [0, 0.22, 0.22], [0, 0.24, 0.24], 
+                    [0, 0.26, 0.26], [0, 0.29, 0.28], [0, 0.31, 0.30], [0, 0.33, 0.33], 
+                    [0, 0.35, 0.35], [0, 0.37, 0.37], [0, 0.39, 0.39], [0, 0.42, 0.41], 
+                    [0, 0.44, 0.43], [0, 0.46, 0.46], [0, 0.48, 0.48], [0, 0.50, 0.50], 
+                    [0, 0.53, 0.52], [0, 0.55, 0.54], [0, 0.57, 0.57], [0, 0.59, 0.59], 
+                    [0, 0.61, 0.61], [0, 0.63, 0.63], [0, 0.66, 0.65], [0, 0.68, 0.67], 
+                    [0, 0.70, 0.70], [0, 0.72, 0.72], [0, 0.74, 0.74], [0, 0.76, 0.76], 
+                    [0, 0.79, 0.78], [0, 0.81, 0.80], [0, 0.83, 0.83], [0, 0.85, 0.85], 
+                    [0, 0.87, 0.87], [0, 0.89, 0.89], [0, 0.91, 0.91], [0, 0.94, 0.93], 
+                    [0, 0.96, 0.96], [0, 0.98, 0.98], [0, 1.00, 1.00]
+                    ];
+
+      // Segment T boundaries
+      this.segmentT = [1.00];
+
+      this.lastValue = -1.0;
+      this.x = 0;
+      this.y = 0;
+      this.orientation = 0.0;
+      this.pathClock = new clock(25.00, 0.00, 1, false, 0, linear, this.linear.length - 1, 1.00, 0.0000);
+
+      // Update function
+      this.update = updatePath;
+    }
+
+    function init() {
+
+      // Set main canvas and context references
+      canvas = document.getElementById("canvas");
+      ctx = canvas.getContext("2d");
+
+      // Initialize animations
+      blades2.rotateClock = new clock(5.00, 0.00, 1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
+      blades1.rotateClock = new clock(5.00, 0.00, 1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
+
+      // Start animation clocks
+      animations[0].pathClock.start();
+      animations[1].pathClock.start();
+      animations[2].pathClock.start();
+      animations[3].pathClock.start();
+      blades2.rotateClock.start();
+      blades1.rotateClock.start();
+
+      // Set animation timer
+      setInterval(drawFrame, (1000 / fps));
+    }
+
+    function updateAnimations() {
+
+      // Update animation clocks
+      updateAllClocks();
+
+      // Update animation paths  
+      var animationCount = animations.length;
+      for (var i = 0; i < animationCount; i++) {
+        animations[i].update();
+      }
+    }
+
+    function drawFrame() {
+
+      // Update animations
+      updateAnimations();
+
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      backgorund(ctx);
+
+      sky(ctx);
+
+      ctx.save();
+      ctx.translate(animations[0].x, animations[0].y);
+      cloud3(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[2].x, animations[2].y);
+      cloud2(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[1].x, animations[1].y);
+      cloud1(ctx);
+      ctx.restore();
+
+      ctx.save();
+      ctx.translate(animations[3].x, animations[3].y);
+      cloud4(ctx);
+      ctx.restore();
+
+      ground2(ctx);
+
+      tallPine2(ctx);
+
+      trunk6(ctx);
+
+      tallPine2(ctx);
+
+      pine5(ctx);
+
+      pine4(ctx);
+
+      trunk9(ctx);
+
+      pine3(ctx);
+
+      pine2(ctx);
+
+      tree4(ctx);
+
+      trunk8(ctx);
+
+      trunk7(ctx);
+
+      tree3(ctx);
+
+      trunk5(ctx);
+
+      tree2(ctx);
+
+      trunk4(ctx);
+
+      pine1(ctx);
+
+      trunk3(ctx);
+
+      trunk2(ctx);
+
+      trunk1(ctx);
+
+      tree1(ctx);
+
+      ground1(ctx);
+
+      pole2(ctx);
+
+      ctx.save();
+      ctx.translate(832.0, 399.0);
+      ctx.rotate(blades2.rotateClock.value);
+      blades2(ctx);
+      ctx.restore();
+
+      circle2(ctx);
+
+      pole1(ctx);
+
+      ctx.save();
+      ctx.translate(416.0, 606.4);
+      ctx.rotate(blades1.rotateClock.value);
+      blades1(ctx);
+      ctx.restore();
+
+      circel1(ctx);
+
+      bush3(ctx);
+
+      draw(ctx);
+
+      grass2(ctx);
+
+      grass1(ctx);
+
+      bush2(ctx);
+
+      bush1(ctx);
+    }
+
+    function backgorund(ctx) {
+
+      // backgorund/Rectangle
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(1200.0, 1300.0);
+      ctx.lineTo(0.0, 1300.0);
+      ctx.lineTo(0.0, 0.0);
+      ctx.lineTo(1200.0, 0.0);
+      ctx.lineTo(1200.0, 1300.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(241, 241, 239)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function sky(ctx) {
+
+      var gradient;
+
+      // sky/Path
+      ctx.save();
+      // This unsupported artwork has been rasterized
+      ctx.drawImage(document.getElementById("image1"), 24.0, 24.0);
+      ctx.restore();
+    }
+
+    function cloud3(ctx) {
+
+      // cloud3/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(-267.7, 48.2);
+      ctx.bezierCurveTo(-267.7, 48.2, -190.3, -45.5, -107.8, -47.1);
+      ctx.bezierCurveTo(-25.3, -48.7, -25.3, 13.1, 32.9, 9.9);
+      ctx.bezierCurveTo(91.1, 6.7, 118.6, -58.2, 166.9, -47.1);
+      ctx.bezierCurveTo(215.1, -35.9, 257.8, 48.2, 257.8, 48.2);
+      ctx.lineTo(-267.7, 48.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(241, 241, 239)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function cloud2(ctx) {
+
+      // cloud2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(-451.1, 69.2);
+      ctx.bezierCurveTo(-451.1, 69.2, -335.1, -61.5, -197.6, -68.7);
+      ctx.bezierCurveTo(-60.0, -75.9, -19.0, 9.8, 55.2, 8.2);
+      ctx.bezierCurveTo(129.3, 6.6, 173.2, -70.3, 267.3, -40.4);
+      ctx.bezierCurveTo(361.3, -10.5, 441.1, 69.2, 441.1, 69.2);
+      ctx.lineTo(-451.1, 69.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(241, 241, 239)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function cloud1(ctx) {
+
+      // cloud1/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(-292.5, 53.1);
+      ctx.bezierCurveTo(-292.5, 53.1, -235.1, -13.0, -191.2, -8.7);
+      ctx.bezierCurveTo(-147.4, -4.3, -90.4, 38.4, -56.9, 34.0);
+      ctx.bezierCurveTo(-23.4, 29.6, 66.7, -62.9, 147.6, -52.9);
+      ctx.bezierCurveTo(228.6, -42.9, 282.8, 53.1, 282.8, 53.1);
+      ctx.lineTo(-292.5, 53.1);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(241, 241, 239)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function cloud4(ctx) {
+
+      // cloud4/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(-418.0, 65.1);
+      ctx.bezierCurveTo(-418.0, 65.1, -340.3, -29.4, -267.4, -20.7);
+      ctx.bezierCurveTo(-194.4, -11.9, -173.7, 18.0, -115.1, 10.8);
+      ctx.bezierCurveTo(-56.5, 3.7, 77.5, -81.6, 199.9, -61.7);
+      ctx.bezierCurveTo(322.2, -41.8, 408.5, 65.1, 408.5, 65.1);
+      ctx.lineTo(-418.0, 65.1);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(241, 241, 239)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function ground2(ctx) {
+
+      // ground2/Group
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+
+      // ground2/Group/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(153.5, 663.5);
+      ctx.bezierCurveTo(464.1, 397.1, 721.4, 513.8, 845.5, 562.8);
+      ctx.bezierCurveTo(914.2, 590.0, 1034.0, 649.6, 1140.6, 704.6);
+      ctx.lineTo(1140.6, 45.5);
+      ctx.lineTo(60.6, 45.5);
+      ctx.lineTo(60.6, 731.0);
+      ctx.bezierCurveTo(92.7, 711.3, 123.9, 689.0, 153.5, 663.5);
+      ctx.closePath();
+
+      // ground2/Group/Path
+      ctx.beginPath();
+      ctx.moveTo(136.9, 669.0);
+      ctx.bezierCurveTo(106.2, 695.3, 73.9, 718.4, 40.6, 738.7);
+      ctx.lineTo(40.6, 1146.1);
+      ctx.lineTo(1159.4, 1146.1);
+      ctx.lineTo(1159.4, 711.4);
+      ctx.bezierCurveTo(1049.0, 654.7, 924.9, 593.1, 853.7, 565.1);
+      ctx.bezierCurveTo(725.1, 514.5, 458.6, 393.9, 136.9, 669.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(129, 164, 59)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function tallPine2(ctx) {
+
+      // tallPine2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(594.4, 832.0);
+      ctx.lineTo(579.7, 806.6);
+      ctx.lineTo(585.7, 806.6);
+      ctx.bezierCurveTo(592.4, 806.6, 595.1, 801.8, 591.8, 796.0);
+      ctx.lineTo(577.7, 771.7);
+      ctx.lineTo(584.2, 771.7);
+      ctx.bezierCurveTo(590.4, 771.7, 592.9, 767.3, 589.9, 762.0);
+      ctx.lineTo(576.9, 739.5);
+      ctx.lineTo(583.3, 739.5);
+      ctx.bezierCurveTo(589.1, 739.5, 591.5, 735.4, 588.6, 730.3);
+      ctx.lineTo(576.3, 709.0);
+      ctx.lineTo(580.7, 709.0);
+      ctx.bezierCurveTo(585.7, 709.0, 587.8, 705.4, 585.3, 701.1);
+      ctx.lineTo(570.7, 676.0);
+      ctx.bezierCurveTo(568.3, 671.6, 564.2, 671.6, 561.7, 676.0);
+      ctx.lineTo(547.2, 701.1);
+      ctx.bezierCurveTo(544.7, 705.4, 546.7, 709.0, 551.7, 709.0);
+      ctx.lineTo(556.2, 709.0);
+      ctx.lineTo(543.8, 730.3);
+      ctx.bezierCurveTo(540.9, 735.4, 543.3, 739.5, 549.2, 739.5);
+      ctx.lineTo(555.5, 739.5);
+      ctx.lineTo(542.6, 762.0);
+      ctx.bezierCurveTo(539.5, 767.3, 542.0, 771.7, 548.2, 771.7);
+      ctx.lineTo(554.7, 771.7);
+      ctx.lineTo(540.6, 796.0);
+      ctx.bezierCurveTo(537.3, 801.8, 540.0, 806.6, 546.7, 806.6);
+      ctx.lineTo(552.8, 806.6);
+      ctx.lineTo(538.1, 832.0);
+      ctx.bezierCurveTo(534.4, 838.4, 537.4, 843.6, 544.8, 843.6);
+      ctx.lineTo(587.7, 843.6);
+      ctx.bezierCurveTo(595.0, 843.6, 598.0, 838.4, 594.4, 832.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(35, 65, 13)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk6(ctx) {
+
+      // trunk6/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(280.4, 1150.2);
+      ctx.lineTo(277.9, 1150.2);
+      ctx.lineTo(277.7, 898.3);
+      ctx.lineTo(280.3, 898.3);
+      ctx.lineTo(280.4, 1150.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function tallPine2(ctx) {
+
+      // tallPine2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(328.6, 1078.8);
+      ctx.lineTo(302.7, 1034.0);
+      ctx.lineTo(313.4, 1034.0);
+      ctx.bezierCurveTo(325.1, 1034.0, 329.9, 1025.7, 324.1, 1015.5);
+      ctx.lineTo(299.4, 972.7);
+      ctx.lineTo(310.8, 972.7);
+      ctx.bezierCurveTo(321.6, 972.7, 326.1, 965.0, 320.7, 955.6);
+      ctx.lineTo(297.9, 916.1);
+      ctx.lineTo(309.1, 916.1);
+      ctx.bezierCurveTo(319.4, 916.1, 323.6, 908.8, 318.5, 899.9);
+      ctx.lineTo(296.8, 862.3);
+      ctx.lineTo(304.6, 862.3);
+      ctx.bezierCurveTo(313.4, 862.3, 317.0, 856.1, 312.6, 848.5);
+      ctx.lineTo(287.0, 804.2);
+      ctx.bezierCurveTo(282.7, 796.6, 275.5, 796.6, 271.1, 804.2);
+      ctx.lineTo(245.6, 848.5);
+      ctx.bezierCurveTo(241.2, 856.1, 244.8, 862.3, 253.5, 862.3);
+      ctx.lineTo(261.4, 862.3);
+      ctx.lineTo(239.7, 899.9);
+      ctx.bezierCurveTo(234.5, 908.8, 238.7, 916.1, 249.1, 916.1);
+      ctx.lineTo(260.3, 916.1);
+      ctx.lineTo(237.5, 955.6);
+      ctx.bezierCurveTo(232.0, 965.0, 236.5, 972.7, 247.4, 972.7);
+      ctx.lineTo(258.8, 972.7);
+      ctx.lineTo(234.1, 1015.5);
+      ctx.bezierCurveTo(228.2, 1025.7, 233.0, 1034.0, 244.8, 1034.0);
+      ctx.lineTo(255.4, 1034.0);
+      ctx.lineTo(229.6, 1078.8);
+      ctx.bezierCurveTo(223.1, 1090.0, 228.4, 1099.2, 241.3, 1099.2);
+      ctx.lineTo(316.8, 1099.2);
+      ctx.bezierCurveTo(329.8, 1099.2, 335.1, 1090.0, 328.6, 1078.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(35, 65, 13)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function pine5(ctx) {
+
+      // pine5/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(541.6, 873.2);
+      ctx.lineTo(522.0, 843.2);
+      ctx.lineTo(527.1, 843.2);
+      ctx.bezierCurveTo(535.5, 843.2, 538.2, 836.8, 533.2, 829.0);
+      ctx.lineTo(512.9, 797.9);
+      ctx.lineTo(517.8, 797.9);
+      ctx.bezierCurveTo(524.2, 797.9, 526.3, 793.1, 522.5, 787.2);
+      ctx.lineTo(495.9, 746.5);
+      ctx.bezierCurveTo(492.1, 740.6, 485.8, 740.6, 481.9, 746.5);
+      ctx.lineTo(455.4, 787.2);
+      ctx.bezierCurveTo(451.5, 793.1, 453.6, 797.9, 460.0, 797.9);
+      ctx.lineTo(465.0, 797.9);
+      ctx.lineTo(444.7, 829.0);
+      ctx.bezierCurveTo(439.6, 836.8, 442.4, 843.2, 450.8, 843.2);
+      ctx.lineTo(455.8, 843.2);
+      ctx.lineTo(436.3, 873.2);
+      ctx.bezierCurveTo(430.2, 882.4, 433.5, 890.0, 443.5, 890.0);
+      ctx.lineTo(470.7, 890.0);
+      ctx.bezierCurveTo(480.7, 890.0, 497.2, 890.0, 507.2, 890.0);
+      ctx.lineTo(534.3, 890.0);
+      ctx.bezierCurveTo(544.4, 890.0, 547.7, 882.4, 541.6, 873.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function pine4(ctx) {
+
+      // pine4/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(470.9, 944.1);
+      ctx.lineTo(437.8, 893.4);
+      ctx.lineTo(446.3, 893.4);
+      ctx.bezierCurveTo(460.5, 893.4, 465.2, 882.7, 456.6, 869.5);
+      ctx.lineTo(422.4, 817.1);
+      ctx.lineTo(430.7, 817.1);
+      ctx.bezierCurveTo(441.5, 817.1, 445.0, 808.9, 438.5, 798.9);
+      ctx.lineTo(393.7, 730.2);
+      ctx.bezierCurveTo(387.2, 720.2, 376.6, 720.2, 370.1, 730.2);
+      ctx.lineTo(325.2, 798.9);
+      ctx.bezierCurveTo(318.7, 808.9, 322.2, 817.1, 333.1, 817.1);
+      ctx.lineTo(341.4, 817.1);
+      ctx.lineTo(307.2, 869.5);
+      ctx.bezierCurveTo(298.6, 882.7, 303.3, 893.4, 317.5, 893.4);
+      ctx.lineTo(326.0, 893.4);
+      ctx.lineTo(292.9, 944.1);
+      ctx.bezierCurveTo(282.7, 959.8, 288.2, 972.6, 305.2, 972.6);
+      ctx.lineTo(351.0, 972.6);
+      ctx.bezierCurveTo(368.0, 972.6, 395.8, 972.6, 412.8, 972.6);
+      ctx.lineTo(458.6, 972.6);
+      ctx.bezierCurveTo(475.5, 972.6, 481.1, 959.8, 470.9, 944.1);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk9(ctx) {
+
+      // trunk9/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(382.9, 996.9);
+      ctx.lineTo(380.9, 996.9);
+      ctx.lineTo(380.9, 796.5);
+      ctx.lineTo(382.9, 796.5);
+      ctx.lineTo(382.9, 996.9);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(127, 149, 118)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function pine3(ctx) {
+
+      // pine3/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(53.1, 986.8);
+      ctx.lineTo(67.8, 995.7);
+      ctx.lineTo(54.4, 983.2);
+      ctx.lineTo(80.1, 914.7);
+      ctx.lineTo(117.9, 1015.6);
+      ctx.lineTo(80.9, 1036.8);
+      ctx.lineTo(122.8, 1028.8);
+      ctx.lineTo(145.4, 1089.2);
+      ctx.lineTo(80.1, 1089.2);
+      ctx.lineTo(14.7, 1089.2);
+      ctx.lineTo(53.1, 986.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function pine2(ctx) {
+
+      // pine2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(362.1, 910.8);
+      ctx.lineTo(343.8, 921.9);
+      ctx.lineTo(360.4, 906.4);
+      ctx.lineTo(328.5, 821.3);
+      ctx.lineTo(281.6, 946.6);
+      ctx.lineTo(327.5, 972.9);
+      ctx.lineTo(275.5, 963.0);
+      ctx.lineTo(247.4, 1037.9);
+      ctx.lineTo(328.5, 1037.9);
+      ctx.lineTo(409.7, 1037.9);
+      ctx.lineTo(362.1, 910.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(63, 98, 36)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function tree4(ctx) {
+
+      // tree4/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(734.3, 686.6);
+      ctx.bezierCurveTo(734.3, 686.6, 755.9, 710.4, 760.0, 751.5);
+      ctx.bezierCurveTo(764.1, 792.6, 757.1, 811.9, 757.1, 811.9);
+      ctx.lineTo(763.8, 803.6);
+      ctx.bezierCurveTo(763.8, 803.6, 767.6, 819.5, 758.3, 850.9);
+      ctx.bezierCurveTo(749.0, 882.4, 734.3, 884.8, 734.3, 884.8);
+      ctx.bezierCurveTo(734.3, 884.8, 715.1, 878.6, 707.5, 848.5);
+      ctx.bezierCurveTo(699.9, 818.5, 703.7, 800.5, 703.7, 800.5);
+      ctx.lineTo(713.1, 809.5);
+      ctx.bezierCurveTo(713.1, 809.5, 706.8, 795.7, 705.5, 784.0);
+      ctx.bezierCurveTo(704.1, 772.2, 708.6, 755.0, 708.6, 755.0);
+      ctx.lineTo(714.8, 765.0);
+      ctx.bezierCurveTo(714.8, 765.0, 710.3, 748.4, 715.8, 724.3);
+      ctx.bezierCurveTo(721.3, 700.1, 734.3, 686.6, 734.3, 686.6);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(158, 187, 45)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk8(ctx) {
+
+      // trunk8/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(746.4, 843.0);
+      ctx.lineTo(745.1, 842.2);
+      ctx.lineTo(734.5, 858.0);
+      ctx.lineTo(734.5, 730.9);
+      ctx.lineTo(732.9, 730.9);
+      ctx.lineTo(732.9, 804.1);
+      ctx.lineTo(722.3, 788.3);
+      ctx.lineTo(720.9, 789.1);
+      ctx.lineTo(732.9, 806.9);
+      ctx.lineTo(732.9, 852.1);
+      ctx.lineTo(722.3, 836.2);
+      ctx.lineTo(720.9, 837.1);
+      ctx.lineTo(732.9, 854.9);
+      ctx.lineTo(732.9, 899.5);
+      ctx.lineTo(734.5, 899.5);
+      ctx.lineTo(734.5, 860.8);
+      ctx.lineTo(746.4, 843.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function trunk7(ctx) {
+
+      // trunk7/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(489.5, 904.4);
+      ctx.lineTo(488.3, 904.4);
+      ctx.lineTo(488.3, 785.8);
+      ctx.lineTo(489.5, 785.8);
+      ctx.lineTo(489.5, 904.4);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(127, 149, 118)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function tree3(ctx) {
+
+      // tree3/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(671.4, 651.9);
+      ctx.bezierCurveTo(671.4, 651.9, 691.1, 673.6, 694.9, 711.1);
+      ctx.bezierCurveTo(698.7, 748.5, 692.2, 766.2, 692.2, 766.2);
+      ctx.lineTo(698.4, 758.6);
+      ctx.bezierCurveTo(698.4, 758.6, 701.8, 773.1, 693.3, 801.7);
+      ctx.bezierCurveTo(684.8, 830.4, 671.4, 832.6, 671.4, 832.6);
+      ctx.bezierCurveTo(671.4, 832.6, 654.0, 826.9, 647.0, 799.5);
+      ctx.bezierCurveTo(640.1, 772.1, 643.6, 755.8, 643.6, 755.8);
+      ctx.lineTo(652.1, 764.0);
+      ctx.bezierCurveTo(652.1, 764.0, 646.4, 751.4, 645.2, 740.7);
+      ctx.bezierCurveTo(643.9, 730.0, 648.0, 714.2, 648.0, 714.2);
+      ctx.lineTo(653.7, 723.3);
+      ctx.bezierCurveTo(653.7, 723.3, 649.6, 708.2, 654.6, 686.2);
+      ctx.bezierCurveTo(659.6, 664.2, 671.4, 651.9, 671.4, 651.9);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(158, 187, 45)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk5(ctx) {
+
+      // trunk5/Layer 44
+      ctx.save();
+
+      // trunk5/Layer 44/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(682.5, 794.5);
+      ctx.lineTo(681.3, 793.7);
+      ctx.lineTo(671.6, 808.2);
+      ctx.lineTo(671.6, 692.3);
+      ctx.lineTo(670.2, 692.3);
+      ctx.lineTo(670.2, 759.0);
+      ctx.lineTo(660.5, 744.6);
+      ctx.lineTo(659.3, 745.4);
+      ctx.lineTo(670.2, 761.6);
+      ctx.lineTo(670.2, 802.7);
+      ctx.lineTo(660.5, 788.3);
+      ctx.lineTo(659.3, 789.1);
+      ctx.lineTo(670.2, 805.3);
+      ctx.lineTo(670.2, 846.0);
+      ctx.lineTo(671.6, 846.0);
+      ctx.lineTo(671.6, 810.8);
+      ctx.lineTo(682.5, 794.5);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function tree2(ctx) {
+
+      // tree2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(629.7, 734.8);
+      ctx.bezierCurveTo(629.7, 734.8, 651.3, 758.6, 655.4, 799.7);
+      ctx.bezierCurveTo(659.6, 840.8, 652.5, 860.1, 652.5, 860.1);
+      ctx.lineTo(659.2, 851.8);
+      ctx.bezierCurveTo(659.2, 851.8, 663.0, 867.7, 653.7, 899.1);
+      ctx.bezierCurveTo(644.4, 930.5, 629.7, 933.0, 629.7, 933.0);
+      ctx.bezierCurveTo(629.7, 933.0, 610.6, 926.7, 603.0, 896.7);
+      ctx.bezierCurveTo(595.4, 866.7, 599.2, 848.7, 599.2, 848.7);
+      ctx.lineTo(608.5, 857.7);
+      ctx.bezierCurveTo(608.5, 857.7, 602.3, 843.9, 600.9, 832.2);
+      ctx.bezierCurveTo(599.5, 820.4, 604.0, 803.2, 604.0, 803.2);
+      ctx.lineTo(610.2, 813.2);
+      ctx.bezierCurveTo(610.2, 813.2, 605.7, 796.6, 611.3, 772.4);
+      ctx.bezierCurveTo(616.8, 748.3, 629.7, 734.8, 629.7, 734.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(158, 187, 45)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk4(ctx) {
+
+      // trunk4/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(641.8, 891.2);
+      ctx.lineTo(640.5, 890.3);
+      ctx.lineTo(629.9, 906.2);
+      ctx.lineTo(629.9, 779.1);
+      ctx.lineTo(628.3, 779.1);
+      ctx.lineTo(628.3, 852.3);
+      ctx.lineTo(617.7, 836.4);
+      ctx.lineTo(616.4, 837.3);
+      ctx.lineTo(628.3, 855.1);
+      ctx.lineTo(628.3, 900.2);
+      ctx.lineTo(617.7, 884.4);
+      ctx.lineTo(616.4, 885.3);
+      ctx.lineTo(628.3, 903.1);
+      ctx.lineTo(628.3, 947.6);
+      ctx.lineTo(629.9, 947.6);
+      ctx.lineTo(629.9, 909.0);
+      ctx.lineTo(641.8, 891.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function pine1(ctx) {
+
+      // pine1/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(499.4, 868.6);
+      ctx.lineTo(518.7, 880.4);
+      ctx.lineTo(501.1, 864.0);
+      ctx.lineTo(534.8, 774.2);
+      ctx.lineTo(584.3, 906.4);
+      ctx.lineTo(535.9, 934.1);
+      ctx.lineTo(590.8, 923.7);
+      ctx.lineTo(620.4, 1002.8);
+      ctx.lineTo(534.8, 1002.8);
+      ctx.lineTo(449.1, 1002.8);
+      ctx.lineTo(499.4, 868.6);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function trunk3(ctx) {
+
+      // trunk3/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(532.4, 1073.8);
+      ctx.lineTo(534.7, 1073.8);
+      ctx.lineTo(534.7, 850.1);
+      ctx.lineTo(532.4, 850.1);
+      ctx.lineTo(532.4, 1073.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function trunk2(ctx) {
+
+      // trunk2/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(331.5, 1091.6);
+      ctx.lineTo(329.3, 1091.6);
+      ctx.lineTo(329.3, 879.8);
+      ctx.lineTo(331.5, 879.8);
+      ctx.lineTo(331.5, 1091.6);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function trunk1(ctx) {
+
+      // trunk1/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(78.2, 1142.3);
+      ctx.lineTo(80.0, 1142.3);
+      ctx.lineTo(80.0, 971.6);
+      ctx.lineTo(78.2, 971.6);
+      ctx.lineTo(78.2, 1142.3);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function tree1(ctx) {
+
+      // tree1/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(180.9, 870.2);
+      ctx.bezierCurveTo(164.3, 870.2, 98.9, 1110.0, 123.3, 1148.6);
+      ctx.bezierCurveTo(142.9, 1180.7, 158.3, 1179.5, 180.9, 1179.5);
+      ctx.bezierCurveTo(203.5, 1179.5, 219.0, 1180.7, 238.6, 1148.6);
+      ctx.bezierCurveTo(263.0, 1110.0, 197.6, 870.2, 180.9, 870.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(158, 187, 45)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function ground1(ctx) {
+
+      // ground1/Group
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.10)";
+      ctx.shadowOffsetX = -7.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 30.0;
+
+      // ground1/Group/Path
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(246.0, 1159.7);
+      ctx.bezierCurveTo(246.0, 1159.7, 409.5, 1024.6, 725.6, 889.1);
+      ctx.bezierCurveTo(875.1, 825.0, 1021.0, 788.7, 1133.4, 768.3);
+      ctx.lineTo(1133.4, 80.4);
+      ctx.lineTo(53.4, 80.4);
+      ctx.lineTo(53.4, 1160.4);
+      ctx.lineTo(1133.4, 1160.4);
+      ctx.lineTo(1133.4, 1159.7);
+      ctx.lineTo(246.0, 1159.7);
+      ctx.closePath();
+
+      // ground1/Group/Path
+      ctx.beginPath();
+      ctx.moveTo(246.0, 1170.0);
+      ctx.lineTo(1141.2, 1170.0);
+      ctx.lineTo(1141.2, 768.3);
+      ctx.bezierCurveTo(1027.8, 789.2, 880.6, 826.5, 729.8, 892.2);
+      ctx.bezierCurveTo(410.9, 1031.3, 246.0, 1170.0, 246.0, 1170.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(158, 187, 45)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function pole2(ctx) {
+
+      // pole2/pole1
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(843.0, 395.5);
+      ctx.lineTo(835.3, 395.5);
+      ctx.lineTo(827.7, 395.5);
+      ctx.lineTo(817.9, 881.1);
+      ctx.lineTo(835.3, 881.1);
+      ctx.lineTo(852.8, 881.1);
+      ctx.lineTo(843.0, 395.5);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(190, 43, 70)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function blades2(ctx) {
+
+      // blades2/blades1o 1 1 rdir cw
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(13.9, -2.2);
+      ctx.bezierCurveTo(13.2, -5.3, 11.6, -8.2, 9.3, -10.1);
+      ctx.lineTo(9.5, -10.1);
+      ctx.lineTo(22.0, -54.8);
+      ctx.lineTo(-10.2, -256.6);
+      ctx.lineTo(-10.2, -10.5);
+      ctx.bezierCurveTo(-12.4, -8.5, -14.1, -5.7, -14.8, -2.5);
+      ctx.lineTo(-14.9, -2.7);
+      ctx.lineTo(-59.6, 8.7);
+      ctx.lineTo(-217.7, 137.4);
+      ctx.lineTo(-5.2, 14.4);
+      ctx.bezierCurveTo(-3.7, 14.9, -2.1, 15.2, -0.5, 15.2);
+      ctx.bezierCurveTo(1.1, 15.2, 2.6, 14.9, 4.0, 14.4);
+      ctx.lineTo(3.9, 14.7);
+      ctx.lineTo(36.2, 47.8);
+      ctx.lineTo(226.3, 120.8);
+      ctx.lineTo(13.9, -2.2);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(216, 180, 149)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function circle2(ctx) {
+
+      // circle2/circle1
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(856.6, 401.8);
+      ctx.bezierCurveTo(856.6, 414.0, 846.7, 423.9, 834.5, 423.9);
+      ctx.bezierCurveTo(822.3, 423.9, 812.4, 414.0, 812.4, 401.8);
+      ctx.bezierCurveTo(812.4, 389.6, 822.3, 379.7, 834.5, 379.7);
+      ctx.bezierCurveTo(846.7, 379.7, 856.6, 389.6, 856.6, 401.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(63, 2, 18)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function pole1(ctx) {
+
+      // pole1/pole2
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(424.4, 607.4);
+      ctx.lineTo(416.7, 607.4);
+      ctx.lineTo(409.1, 607.4);
+      ctx.lineTo(399.3, 1093.0);
+      ctx.lineTo(416.7, 1093.0);
+      ctx.lineTo(434.2, 1093.0);
+      ctx.lineTo(424.4, 607.4);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(190, 43, 70)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function blades1(ctx) {
+
+      // blades1/blades2origin 05 05 rotationdirection cw
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(14.1, -1.9);
+      ctx.bezierCurveTo(13.4, -5.0, 11.8, -7.9, 9.5, -9.8);
+      ctx.lineTo(9.7, -9.8);
+      ctx.lineTo(22.2, -54.5);
+      ctx.lineTo(-10.0, -256.0);
+      ctx.lineTo(-10.0, -10.2);
+      ctx.bezierCurveTo(-12.2, -8.2, -14.0, -5.4, -14.6, -2.2);
+      ctx.lineTo(-14.7, -2.4);
+      ctx.lineTo(-59.5, 9.0);
+      ctx.lineTo(-217.9, 137.5);
+      ctx.lineTo(-5.0, 14.6);
+      ctx.bezierCurveTo(-3.6, 15.2, -2.0, 15.4, -0.3, 15.4);
+      ctx.bezierCurveTo(1.3, 15.4, 2.8, 15.2, 4.2, 14.7);
+      ctx.lineTo(4.1, 14.9);
+      ctx.lineTo(36.4, 48.0);
+      ctx.lineTo(226.9, 121.0);
+      ctx.lineTo(14.1, -1.9);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(216, 180, 149)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function circel1(ctx) {
+
+      // circel1/circle2
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 10.0;
+      ctx.beginPath();
+      ctx.moveTo(438.8, 608.0);
+      ctx.bezierCurveTo(438.8, 620.2, 428.9, 630.1, 416.6, 630.1);
+      ctx.bezierCurveTo(404.4, 630.1, 394.5, 620.2, 394.5, 608.0);
+      ctx.bezierCurveTo(394.5, 595.8, 404.4, 585.9, 416.6, 585.9);
+      ctx.bezierCurveTo(428.9, 585.9, 438.8, 595.8, 438.8, 608.0);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(63, 2, 18)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function bush3(ctx) {
+
+      // bush3/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(1088.7, 1127.7);
+      ctx.bezierCurveTo(1127.5, 1128.6, 1170.9, 1124.1, 1170.7, 1109.4);
+      ctx.bezierCurveTo(1169.9, 1098.2, 1161.5, 1095.2, 1161.5, 1095.2);
+      ctx.bezierCurveTo(1161.5, 1095.2, 1191.3, 1086.9, 1187.1, 1057.3);
+      ctx.bezierCurveTo(1183.0, 1027.8, 1140.5, 1044.5, 1140.5, 1044.5);
+      ctx.bezierCurveTo(1140.5, 1044.5, 1177.7, 983.2, 1158.9, 971.5);
+      ctx.bezierCurveTo(1140.0, 959.8, 1104.3, 1006.0, 1104.3, 1006.0);
+      ctx.bezierCurveTo(1104.3, 1006.0, 1117.5, 925.9, 1075.6, 930.9);
+      ctx.bezierCurveTo(1033.8, 936.0, 1067.3, 1016.6, 1067.3, 1016.6);
+      ctx.bezierCurveTo(1067.3, 1016.6, 1038.5, 990.3, 1028.0, 1011.5);
+      ctx.bezierCurveTo(1017.5, 1032.8, 1061.5, 1075.5, 1061.5, 1075.5);
+      ctx.bezierCurveTo(1061.5, 1075.5, 1037.9, 1058.2, 1029.6, 1067.3);
+      ctx.bezierCurveTo(1021.2, 1076.4, 1044.2, 1089.6, 1044.2, 1089.6);
+      ctx.bezierCurveTo(1044.2, 1089.6, 1013.2, 1079.5, 1011.4, 1095.7);
+      ctx.bezierCurveTo(1009.7, 1111.9, 1050.0, 1126.7, 1088.7, 1127.7);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function draw(ctx) {
+
+      // layer28/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(526.0, 1188.1);
+      ctx.bezierCurveTo(551.7, 1188.7, 580.7, 1185.7, 580.5, 1175.9);
+      ctx.bezierCurveTo(580.0, 1168.5, 574.4, 1166.4, 574.4, 1166.4);
+      ctx.bezierCurveTo(574.4, 1166.4, 594.3, 1160.9, 591.5, 1141.2);
+      ctx.bezierCurveTo(588.7, 1121.6, 560.5, 1132.7, 560.5, 1132.7);
+      ctx.bezierCurveTo(560.5, 1132.7, 585.2, 1091.9, 572.7, 1084.1);
+      ctx.bezierCurveTo(560.1, 1076.4, 536.3, 1107.1, 536.3, 1107.1);
+      ctx.bezierCurveTo(536.3, 1107.1, 545.1, 1053.7, 517.2, 1057.1);
+      ctx.bezierCurveTo(489.4, 1060.5, 511.7, 1114.1, 511.7, 1114.1);
+      ctx.bezierCurveTo(511.7, 1114.1, 492.5, 1096.6, 485.5, 1110.8);
+      ctx.bezierCurveTo(478.6, 1124.9, 507.8, 1153.4, 507.8, 1153.4);
+      ctx.bezierCurveTo(507.8, 1153.4, 492.2, 1141.8, 486.6, 1147.9);
+      ctx.bezierCurveTo(481.0, 1154.0, 496.3, 1162.7, 496.3, 1162.7);
+      ctx.bezierCurveTo(496.3, 1162.7, 475.7, 1156.0, 474.5, 1166.8);
+      ctx.bezierCurveTo(473.3, 1177.6, 500.2, 1187.5, 526.0, 1188.1);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(102, 145, 60)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function grass2(ctx) {
+
+      // grass2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(429.5, 1101.9);
+      ctx.bezierCurveTo(429.5, 1101.9, 423.1, 1096.6, 416.6, 1093.0);
+      ctx.bezierCurveTo(410.1, 1089.4, 399.9, 1084.2, 399.9, 1084.2);
+      ctx.bezierCurveTo(399.9, 1084.2, 411.4, 1083.8, 419.2, 1088.0);
+      ctx.bezierCurveTo(426.9, 1092.3, 430.4, 1094.2, 430.4, 1094.2);
+      ctx.bezierCurveTo(430.4, 1094.2, 428.7, 1086.1, 419.9, 1072.7);
+      ctx.bezierCurveTo(411.1, 1059.3, 399.0, 1046.9, 399.0, 1046.9);
+      ctx.bezierCurveTo(399.0, 1046.9, 420.6, 1061.9, 426.3, 1069.5);
+      ctx.bezierCurveTo(432.0, 1077.1, 436.6, 1086.0, 436.6, 1086.0);
+      ctx.bezierCurveTo(436.6, 1086.0, 436.2, 1070.9, 435.2, 1063.9);
+      ctx.bezierCurveTo(434.2, 1056.9, 432.4, 1037.7, 432.4, 1037.7);
+      ctx.bezierCurveTo(432.4, 1037.7, 440.1, 1053.4, 441.8, 1065.5);
+      ctx.bezierCurveTo(443.5, 1077.6, 442.7, 1086.3, 442.7, 1086.3);
+      ctx.bezierCurveTo(442.7, 1086.3, 448.8, 1075.4, 454.1, 1068.6);
+      ctx.bezierCurveTo(459.4, 1061.8, 471.1, 1054.3, 471.1, 1054.3);
+      ctx.bezierCurveTo(471.1, 1054.3, 459.0, 1070.5, 457.4, 1073.2);
+      ctx.bezierCurveTo(455.8, 1075.9, 446.9, 1095.0, 446.9, 1095.0);
+      ctx.bezierCurveTo(446.9, 1095.0, 453.7, 1088.5, 461.8, 1084.4);
+      ctx.bezierCurveTo(469.9, 1080.3, 478.0, 1079.1, 478.0, 1079.1);
+      ctx.bezierCurveTo(478.0, 1079.1, 462.6, 1088.3, 458.8, 1091.5);
+      ctx.bezierCurveTo(455.0, 1094.7, 447.0, 1101.9, 447.0, 1101.9);
+      ctx.lineTo(429.5, 1101.9);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(129, 164, 59)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function grass1(ctx) {
+
+      // grass1/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(573.1, 1192.8);
+      ctx.bezierCurveTo(573.1, 1192.8, 568.3, 1189.0, 563.5, 1186.3);
+      ctx.bezierCurveTo(558.7, 1183.7, 551.2, 1179.8, 551.2, 1179.8);
+      ctx.bezierCurveTo(551.2, 1179.8, 559.7, 1179.5, 565.4, 1182.6);
+      ctx.bezierCurveTo(571.2, 1185.8, 573.7, 1187.2, 573.7, 1187.2);
+      ctx.bezierCurveTo(573.7, 1187.2, 572.5, 1181.2, 565.9, 1171.3);
+      ctx.bezierCurveTo(559.4, 1161.4, 550.5, 1152.2, 550.5, 1152.2);
+      ctx.bezierCurveTo(550.5, 1152.2, 566.5, 1163.3, 570.7, 1168.9);
+      ctx.bezierCurveTo(574.9, 1174.6, 578.3, 1181.1, 578.3, 1181.1);
+      ctx.bezierCurveTo(578.3, 1181.1, 578.0, 1170.0, 577.3, 1164.8);
+      ctx.bezierCurveTo(576.5, 1159.6, 575.2, 1145.4, 575.2, 1145.4);
+      ctx.bezierCurveTo(575.2, 1145.4, 580.9, 1157.0, 582.2, 1166.0);
+      ctx.bezierCurveTo(583.4, 1174.9, 582.8, 1181.4, 582.8, 1181.4);
+      ctx.bezierCurveTo(582.8, 1181.4, 587.3, 1173.3, 591.3, 1168.3);
+      ctx.bezierCurveTo(595.2, 1163.2, 603.8, 1157.7, 603.8, 1157.7);
+      ctx.bezierCurveTo(603.8, 1157.7, 594.9, 1169.7, 593.7, 1171.7);
+      ctx.bezierCurveTo(592.5, 1173.7, 585.9, 1187.8, 585.9, 1187.8);
+      ctx.bezierCurveTo(585.9, 1187.8, 591.0, 1183.0, 597.0, 1180.0);
+      ctx.bezierCurveTo(602.9, 1176.9, 608.9, 1176.0, 608.9, 1176.0);
+      ctx.bezierCurveTo(608.9, 1176.0, 597.5, 1182.8, 594.7, 1185.2);
+      ctx.bezierCurveTo(591.9, 1187.6, 586.0, 1192.8, 586.0, 1192.8);
+      ctx.lineTo(573.1, 1192.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(129, 164, 59)";
+      ctx.fill();
+
+      // grass1/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(919.9, 1016.4);
+      ctx.bezierCurveTo(919.9, 1016.4, 915.2, 1012.5, 910.4, 1009.9);
+      ctx.bezierCurveTo(905.5, 1007.2, 898.0, 1003.4, 898.0, 1003.4);
+      ctx.bezierCurveTo(898.0, 1003.4, 906.5, 1003.0, 912.3, 1006.2);
+      ctx.bezierCurveTo(918.0, 1009.3, 920.6, 1010.8, 920.6, 1010.8);
+      ctx.bezierCurveTo(920.6, 1010.8, 919.3, 1004.8, 912.8, 994.8);
+      ctx.bezierCurveTo(906.3, 984.9, 897.4, 975.7, 897.4, 975.7);
+      ctx.bezierCurveTo(897.4, 975.7, 913.3, 986.8, 917.5, 992.5);
+      ctx.bezierCurveTo(921.8, 998.1, 925.2, 1004.7, 925.2, 1004.7);
+      ctx.bezierCurveTo(925.2, 1004.7, 924.9, 993.5, 924.1, 988.3);
+      ctx.bezierCurveTo(923.4, 983.1, 922.1, 968.9, 922.1, 968.9);
+      ctx.bezierCurveTo(922.1, 968.9, 927.7, 980.6, 929.0, 989.5);
+      ctx.bezierCurveTo(930.3, 998.5, 929.7, 1004.9, 929.7, 1004.9);
+      ctx.bezierCurveTo(929.7, 1004.9, 934.2, 996.8, 938.1, 991.8);
+      ctx.bezierCurveTo(942.0, 986.8, 950.7, 981.2, 950.7, 981.2);
+      ctx.bezierCurveTo(950.7, 981.2, 941.7, 993.2, 940.6, 995.2);
+      ctx.bezierCurveTo(939.4, 997.2, 932.8, 1011.3, 932.8, 1011.3);
+      ctx.bezierCurveTo(932.8, 1011.3, 937.8, 1006.5, 943.8, 1003.5);
+      ctx.bezierCurveTo(949.8, 1000.5, 955.8, 999.6, 955.8, 999.6);
+      ctx.bezierCurveTo(955.8, 999.6, 944.4, 1006.4, 941.6, 1008.8);
+      ctx.bezierCurveTo(938.8, 1011.1, 932.9, 1016.4, 932.9, 1016.4);
+      ctx.lineTo(919.9, 1016.4);
+      ctx.closePath();
+      ctx.fill();
+
+      // grass1/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(1068.4, 1146.8);
+      ctx.bezierCurveTo(1068.4, 1146.8, 1063.7, 1142.9, 1058.8, 1140.3);
+      ctx.bezierCurveTo(1054.0, 1137.6, 1046.5, 1133.8, 1046.5, 1133.8);
+      ctx.bezierCurveTo(1046.5, 1133.8, 1055.0, 1133.4, 1060.8, 1136.6);
+      ctx.bezierCurveTo(1066.5, 1139.7, 1069.1, 1141.2, 1069.1, 1141.2);
+      ctx.bezierCurveTo(1069.1, 1141.2, 1067.8, 1135.2, 1061.3, 1125.3);
+      ctx.bezierCurveTo(1054.8, 1115.3, 1045.9, 1106.2, 1045.9, 1106.2);
+      ctx.bezierCurveTo(1045.9, 1106.2, 1061.8, 1117.2, 1066.0, 1122.9);
+      ctx.bezierCurveTo(1070.2, 1128.5, 1073.7, 1135.1, 1073.7, 1135.1);
+      ctx.bezierCurveTo(1073.7, 1135.1, 1073.4, 1123.9, 1072.6, 1118.7);
+      ctx.bezierCurveTo(1071.9, 1113.6, 1070.5, 1099.4, 1070.5, 1099.4);
+      ctx.bezierCurveTo(1070.5, 1099.4, 1076.2, 1111.0, 1077.5, 1119.9);
+      ctx.bezierCurveTo(1078.8, 1128.9, 1078.2, 1135.3, 1078.2, 1135.3);
+      ctx.bezierCurveTo(1078.2, 1135.3, 1082.7, 1127.3, 1086.6, 1122.2);
+      ctx.bezierCurveTo(1090.5, 1117.2, 1099.2, 1111.6, 1099.2, 1111.6);
+      ctx.bezierCurveTo(1099.2, 1111.6, 1090.2, 1123.6, 1089.0, 1125.6);
+      ctx.bezierCurveTo(1087.9, 1127.6, 1081.3, 1141.8, 1081.3, 1141.8);
+      ctx.bezierCurveTo(1081.3, 1141.8, 1086.3, 1137.0, 1092.3, 1133.9);
+      ctx.bezierCurveTo(1098.3, 1130.9, 1104.3, 1130.0, 1104.3, 1130.0);
+      ctx.bezierCurveTo(1104.3, 1130.0, 1092.9, 1136.8, 1090.1, 1139.2);
+      ctx.bezierCurveTo(1087.3, 1141.5, 1081.3, 1146.8, 1081.3, 1146.8);
+      ctx.lineTo(1068.4, 1146.8);
+      ctx.closePath();
+      ctx.fill();
+
+      // grass1/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(738.5, 967.9);
+      ctx.bezierCurveTo(738.5, 967.9, 733.8, 964.1, 729.0, 961.4);
+      ctx.bezierCurveTo(724.2, 958.7, 716.6, 954.9, 716.6, 954.9);
+      ctx.bezierCurveTo(716.6, 954.9, 725.1, 954.6, 730.9, 957.7);
+      ctx.bezierCurveTo(736.6, 960.8, 739.2, 962.3, 739.2, 962.3);
+      ctx.bezierCurveTo(739.2, 962.3, 737.9, 956.3, 731.4, 946.4);
+      ctx.bezierCurveTo(724.9, 936.5, 716.0, 927.3, 716.0, 927.3);
+      ctx.bezierCurveTo(716.0, 927.3, 731.9, 938.4, 736.2, 944.0);
+      ctx.bezierCurveTo(740.4, 949.6, 743.8, 956.2, 743.8, 956.2);
+      ctx.bezierCurveTo(743.8, 956.2, 743.5, 945.0, 742.7, 939.9);
+      ctx.bezierCurveTo(742.0, 934.7, 740.7, 920.5, 740.7, 920.5);
+      ctx.bezierCurveTo(740.7, 920.5, 746.4, 932.1, 747.6, 941.1);
+      ctx.bezierCurveTo(748.9, 950.0, 748.3, 956.4, 748.3, 956.4);
+      ctx.bezierCurveTo(748.3, 956.4, 752.8, 948.4, 756.7, 943.3);
+      ctx.bezierCurveTo(760.6, 938.3, 769.3, 932.8, 769.3, 932.8);
+      ctx.bezierCurveTo(769.3, 932.8, 760.4, 944.8, 759.2, 946.8);
+      ctx.bezierCurveTo(758.0, 948.7, 751.4, 962.9, 751.4, 962.9);
+      ctx.bezierCurveTo(751.4, 962.9, 756.4, 958.1, 762.4, 955.0);
+      ctx.bezierCurveTo(768.4, 952.0, 774.4, 951.1, 774.4, 951.1);
+      ctx.bezierCurveTo(774.4, 951.1, 763.0, 957.9, 760.2, 960.3);
+      ctx.bezierCurveTo(757.4, 962.7, 751.5, 967.9, 751.5, 967.9);
+      ctx.lineTo(738.5, 967.9);
+      ctx.closePath();
+      ctx.fill();
+
+      // grass1/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(1003.3, 898.2);
+      ctx.bezierCurveTo(1003.3, 898.2, 998.6, 894.4, 993.8, 891.7);
+      ctx.bezierCurveTo(989.0, 889.0, 981.4, 885.2, 981.4, 885.2);
+      ctx.bezierCurveTo(981.4, 885.2, 990.0, 884.9, 995.7, 888.0);
+      ctx.bezierCurveTo(1001.5, 891.1, 1004.0, 892.6, 1004.0, 892.6);
+      ctx.bezierCurveTo(1004.0, 892.6, 1002.7, 886.6, 996.2, 876.7);
+      ctx.bezierCurveTo(989.7, 866.8, 980.8, 857.6, 980.8, 857.6);
+      ctx.bezierCurveTo(980.8, 857.6, 996.8, 868.7, 1001.0, 874.3);
+      ctx.bezierCurveTo(1005.2, 879.9, 1008.6, 886.5, 1008.6, 886.5);
+      ctx.bezierCurveTo(1008.6, 886.5, 1008.3, 875.4, 1007.6, 870.2);
+      ctx.bezierCurveTo(1006.8, 865.0, 1005.5, 850.8, 1005.5, 850.8);
+      ctx.bezierCurveTo(1005.5, 850.8, 1011.2, 862.4, 1012.4, 871.4);
+      ctx.bezierCurveTo(1013.7, 880.3, 1013.1, 886.8, 1013.1, 886.8);
+      ctx.bezierCurveTo(1013.1, 886.8, 1017.6, 878.7, 1021.5, 873.7);
+      ctx.bezierCurveTo(1025.5, 868.6, 1034.1, 863.1, 1034.1, 863.1);
+      ctx.bezierCurveTo(1034.1, 863.1, 1025.2, 875.1, 1024.0, 877.1);
+      ctx.bezierCurveTo(1022.8, 879.1, 1016.2, 893.2, 1016.2, 893.2);
+      ctx.bezierCurveTo(1016.2, 893.2, 1021.2, 888.4, 1027.2, 885.3);
+      ctx.bezierCurveTo(1033.2, 882.3, 1039.2, 881.4, 1039.2, 881.4);
+      ctx.bezierCurveTo(1039.2, 881.4, 1027.8, 888.2, 1025.0, 890.6);
+      ctx.bezierCurveTo(1022.2, 893.0, 1016.3, 898.2, 1016.3, 898.2);
+      ctx.lineTo(1003.3, 898.2);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function bush2(ctx) {
+
+      // bush2/Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(928.3, 895.8);
+      ctx.bezierCurveTo(927.2, 882.0, 915.9, 882.5, 915.9, 882.5);
+      ctx.bezierCurveTo(915.9, 882.5, 918.1, 875.2, 915.9, 873.3);
+      ctx.bezierCurveTo(913.7, 871.3, 907.8, 871.6, 907.8, 871.6);
+      ctx.bezierCurveTo(907.8, 871.6, 895.3, 855.2, 881.6, 848.4);
+      ctx.bezierCurveTo(867.8, 841.6, 856.4, 853.2, 851.6, 853.2);
+      ctx.bezierCurveTo(846.8, 853.1, 839.8, 847.1, 830.6, 848.4);
+      ctx.bezierCurveTo(821.4, 849.6, 817.3, 866.7, 813.6, 868.6);
+      ctx.bezierCurveTo(809.8, 870.5, 793.0, 863.1, 791.3, 889.5);
+      ctx.bezierCurveTo(789.7, 915.9, 840.6, 911.5, 859.5, 911.3);
+      ctx.bezierCurveTo(878.5, 911.1, 930.4, 915.4, 928.3, 895.8);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(86, 115, 74)";
+      ctx.fill();
+
+      // bush2/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+      ctx.moveTo(828.6, 1063.7);
+      ctx.bezierCurveTo(827.6, 1049.9, 816.2, 1050.4, 816.2, 1050.4);
+      ctx.bezierCurveTo(816.2, 1050.4, 818.4, 1043.1, 816.2, 1041.1);
+      ctx.bezierCurveTo(814.0, 1039.2, 808.1, 1039.5, 808.1, 1039.5);
+      ctx.bezierCurveTo(808.1, 1039.5, 795.6, 1023.1, 781.9, 1016.3);
+      ctx.bezierCurveTo(768.1, 1009.5, 756.7, 1021.1, 751.9, 1021.1);
+      ctx.bezierCurveTo(747.1, 1021.0, 740.2, 1015.0, 730.9, 1016.2);
+      ctx.bezierCurveTo(721.7, 1017.5, 717.7, 1034.6, 713.9, 1036.5);
+      ctx.bezierCurveTo(710.1, 1038.4, 693.3, 1031.0, 691.6, 1057.4);
+      ctx.bezierCurveTo(690.0, 1083.8, 740.9, 1079.3, 759.8, 1079.1);
+      ctx.bezierCurveTo(778.8, 1079.0, 830.8, 1083.3, 828.6, 1063.7);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+    }
+
+    function bush1(ctx) {
+
+      // bush1/Compound Path
+      ctx.save();
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.beginPath();
+
+      // bush1/Compound Path/Path
+      ctx.save();
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.moveTo(924.4, 903.4);
+      ctx.bezierCurveTo(923.3, 888.8, 911.9, 889.4, 911.9, 889.4);
+      ctx.bezierCurveTo(911.9, 889.4, 914.1, 881.7, 911.9, 879.7);
+      ctx.bezierCurveTo(909.8, 877.7, 903.8, 878.0, 903.8, 878.0);
+      ctx.bezierCurveTo(903.8, 878.0, 891.4, 860.7, 877.6, 853.6);
+      ctx.bezierCurveTo(863.8, 846.5, 852.4, 858.7, 847.6, 858.7);
+      ctx.bezierCurveTo(842.8, 858.6, 835.9, 852.3, 826.7, 853.6);
+      ctx.bezierCurveTo(817.5, 855.0, 813.4, 872.9, 809.6, 875.0);
+      ctx.bezierCurveTo(805.8, 877.0, 789.0, 869.2, 787.4, 897.0);
+      ctx.bezierCurveTo(785.8, 924.7, 836.7, 920.0, 855.6, 919.8);
+      ctx.bezierCurveTo(874.6, 919.5, 926.6, 924.1, 924.4, 903.4);
+      ctx.closePath();
+
+      // bush1/Compound Path/Path
+      ctx.shadowColor = "rgba(0, 0, 0, 0.50)";
+      ctx.shadowOffsetX = 5.0;
+      ctx.shadowOffsetY = 0.0;
+      ctx.shadowBlur = 4.0;
+      ctx.moveTo(825.1, 875.3);
+      ctx.bezierCurveTo(825.1, 875.3, 826.6, 869.2, 831.7, 868.3);
+      ctx.bezierCurveTo(836.9, 867.4, 837.7, 869.9, 839.6, 869.9);
+      ctx.bezierCurveTo(841.6, 869.9, 845.3, 870.0, 846.3, 871.7);
+      ctx.bezierCurveTo(847.3, 873.4, 847.5, 875.3, 847.5, 875.3);
+      ctx.lineTo(825.1, 875.3);
+      ctx.closePath();
+      ctx.fillStyle = "rgb(129, 164, 59)";
+      ctx.fill();
+      ctx.restore();
+      ctx.restore();
+      ctx.restore();
+    }
+  </script>
+ </head>
+ <body onload="init()">
+	 <h1>Windy day, eh?</h1>
+   <canvas id="canvas" width="1200" height="1300"></canvas>
+   <img alt="Path" id="image1" style="display: none" src="image1.png" />
+	 <footer>
+	 <p>© 2025, Yonay Valdes
+This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
+	 </footer>
+ </body>
+</html>
